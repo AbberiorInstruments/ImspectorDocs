@@ -1,7 +1,7 @@
 formats:
     - pdf
 
-requirements_file: rtd_requirements.txt
-
 python:
-   pip_install: true
+  pip_install: true
+  extra_requirements:
+    - docs
