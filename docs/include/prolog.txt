@@ -1,0 +1,4 @@
+.. include:: /include/abbreviations.txt
+.. role:: command(emphasis)
+.. role:: parser(emphasis)
+.. role:: cppcode(code)

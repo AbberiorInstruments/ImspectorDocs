@@ -1,0 +1,12 @@
+.. |NanoBio| replace:: Department of NanoBiophotonics
+.. _NanoBio: http://www.mpibpc.mpg.de/groups/hell/
+
+.. |MPI| replace:: Max-Planck-Institute for biophysical Chemistry
+.. _MPI: http://www.mpibpc.mpg.de/
+
+.. _Shop: http://www.max-planck-innovation.de/de/industrie/technologieangebote/software/article.php?Imspector&id=1728
+
+.. _`CrashRpt library`: http://code.google.com/p/crashrpt/
+
+.. _`imspector webserver`:
+.. _`imspector webpage`: https://imspector.mpibpc.mpg.de
