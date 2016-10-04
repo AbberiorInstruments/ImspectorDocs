@@ -1,8 +1,0 @@
-formats:
-    - pdf
-
-python:
-  version: 2
-  pip_install: true
-  extra_requirements:
-    - docs
