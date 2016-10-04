@@ -1,0 +1,6 @@
+Hardware Configuration
+------------------------------
+
+Some stuff
+
+
