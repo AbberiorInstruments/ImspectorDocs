@@ -1,0 +1,7 @@
+formats:
+    - pdf
+
+requirements_file: docs/rtd_requirements.txt
+
+python:
+   pip_install: true
