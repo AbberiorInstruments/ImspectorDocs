@@ -1,6 +1,8 @@
 Documentation for Imspector
 ===========================
 
+[![Documentation Status](https://readthedocs.org/projects/imspectordocs/badge/?version=latest)](http://imspectordocs.readthedocs.io/en/latest/?badge=latest)
+
 What is Imspector
 -----------------
 Imspector is a software for image acquisition and analysis in high resolution microscopy. It is developed at the
@@ -16,6 +18,7 @@ Development Environment for this documentation
 1. `pip install -U -r ImspectorDocs/requirements.txt`
 
 After this you should be able to build the documentation:
+
 1. `cd ImspectorDocs/docs/`
 1. `make html` or `.\make.bat html`
 1. now `ImspectorDocs\docs\_build\html` will contain the built docs
