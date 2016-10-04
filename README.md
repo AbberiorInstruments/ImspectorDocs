@@ -1,4 +1,4 @@
-Documentation for Imspector
+Documentation for Imspector 
 ===========================
 
 [![Documentation Status](https://readthedocs.org/projects/imspectordocs/badge/?version=latest)](http://imspectordocs.readthedocs.io/en/latest/?badge=latest)
@@ -22,3 +22,6 @@ After this you should be able to build the documentation:
 1. `cd ImspectorDocs/docs/`
 1. `make html` or `.\make.bat html`
 1. now `ImspectorDocs\docs\_build\html` will contain the built docs
+
+The documentation is built after each push. Read the latest version at 
+[ReadTheDocs.org](https://imspectordocs.readthedocs.io/).
