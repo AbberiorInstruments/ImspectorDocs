@@ -7,7 +7,7 @@ switching sequences etc.
 
 Devices providing such generic channels usually have sub-pages to their measurement configuration pages:
 
-.. image:: images/docdlg_ttl.png
+.. image:: ../images/hardware/docdlg_ttl.png
    :align: center
 
 Wait times
@@ -113,7 +113,7 @@ Live Dialog
 Most TTL channel instances will also register a Live Dialog that allows adjustment of the TTL level during and after the measurement. In short, a 
 button which is checked means the level of the TTL channel is high.
 
-.. image:: images/livedlg_ttl.png
+.. image:: ../images/hardware/livedlg_ttl.png
    :align: center
 
 During a measurement, pressing buttons alters their state (they are disabled if the TTL channel runs a sequence). This state change will also 

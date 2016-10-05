@@ -3,7 +3,7 @@ Com Driver
 
 This is a generic comport driver. It allows you to run small scripts at the beginning and the end of the whole
 measurement and for each measurement step. A measurement axis is registered by the driver, so a simple stepping motor
- or scanning device can be programmed through this driver.
+or scanning device can be programmed through this driver.
 
 What does wait/line mean?
 ..........................

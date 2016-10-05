@@ -2,6 +2,8 @@
 The File Format
 ========================
 
+.. role:: cppcode(code)
+
 The Imspector MSR File Format
 ------------------------------
 

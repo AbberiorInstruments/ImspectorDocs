@@ -2,6 +2,8 @@
 Deconvolution
 =====================================
 
+.. role:: parser(emphasis)
+
 In this chapter practical tips for performing a deconvolution of microscopic data with Imspector is given. First,
 some general remarks:
 
@@ -116,9 +118,9 @@ Its algorithm is based in fourier space where the convolution of PSF and object 
 multiplication. The reverse operation, the division is therefore simple to implement and will fail only where the
 fourier transform of the PSF (the optical transfer function, OTF) is zero or has a small amplitude. These is
 unfortunately true for many high spatial frequencies in all practical cases, therefore a regularization factor has to
- be added that dampens frequencies that were not transmitted very well and are dominated by noise and cannot be
- restorated therefore. The way to do it in the program is via the menu command:
- :command:`Analysis/Deconvolution/Linear` as shown in figure \ref{fig:deconv_lin}.
+be added that dampens frequencies that were not transmitted very well and are dominated by noise and cannot be
+restorated therefore. The way to do it in the program is via the menu command:
+:command:`Analysis/Deconvolution/Linear` as shown in figure \ref{fig:deconv_lin}.
 
 .. figure:: images/deconvolution/linear.jpg
 

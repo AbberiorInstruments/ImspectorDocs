@@ -20,13 +20,10 @@ The Function Parser
 
 The size of the output stack equals the size of the input stack. The parser expression is evaluated at every position. The simplest possible
 
-.. code-block::
+.. math:: r
 
-  r
-  
-  
 
-Get the pixel values of a stack to include it into your function: "STACKNAME".val(s,u,v,w)) Keep the "". You can get the stackname by pressing F2. 
+Get the pixel values of a stack to include it into your function: "STACKNAME".val(s,u,v,w)) Keep the "". You can get the stack name by pressing :kbd:`F2`.
 
 Builtins 
 ++++++++
@@ -45,7 +42,7 @@ Functions
 #########
 
 Data Access
-#########
+###########
 
 Constants
 #########

@@ -65,7 +65,7 @@ measurement.
 The program administers the settings defined by the Hardware drivers and allows the creation of template
 measurements including embedded analysis and visualization. Measurements can therefore be repeated at any time with
 identical settings by pressing a single button. Experimental data is always saved together with all relevant settings
- for later reference.
+for later reference.
 
 All data dependencies are remembered by the program so if data changes during a measurement or manual processing all
 necessary steps to update dependent data are repeated automatically. Imspector will even remember dependencies on

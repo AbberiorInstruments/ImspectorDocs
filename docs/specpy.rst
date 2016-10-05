@@ -659,4 +659,4 @@ Examples
 .. toctree::
    :maxdepth: 2
 
-   specpy/specpy_examples
+   specpy/examples

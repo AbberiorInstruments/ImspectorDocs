@@ -4,9 +4,7 @@ FAQ
 
 This is a collection of common problems people encounter when using Imspector. Some are common misconceptions or
 connected to bugs or shortcomings in other software / hardware, but most of them will probably be due to a bug or at
-least an unintuitive feature of Imspector itself. In all cases a possible workaround is suggested. If the bug has been
- fixed or the feature changes in a later Imspector version, it is most probably mentioned here. Otherwise a quick look
-in the (hugely incomplete) :ref:`Changelog` could help to see whether downloading a newer revision can help. 
+least an unintuitive feature of Imspector itself. In all cases a possible workaround is suggested. 
 
 Errors During Startup
 ----------------------
@@ -16,7 +14,7 @@ Imspector does not start because the 'application configuration' is incorrect.
 
 If Imspector never starts and instead you you see the following dialog
 
-.. image:: images/runtime_error.png
+.. image:: images/faq/runtime_error.png
    :align: center
 
 
@@ -52,7 +50,7 @@ A convenient way to identify the correct drivers is to look for the hardware ids
 Identify the device and go to the details tab. Select the **Hardware Ids** property and then google for the whole
 string or the ids behind **VID** and **PID** (for example 067B and 2303). Often this points you in the right direction.
 
-.. image:: images/vidpid_devmanager.png
+.. image:: images/faq/vidpid_devmanager.png
    :align: center
 
 Hardware Initialization
@@ -66,7 +64,7 @@ either switch to a newer version or you can rename the ports in question through
 open port properties and click on the "Advanced Settings" button. There you may select a new port number. Often you
 will need to disconnect and re-connect the device afterwards to re-initialize the driver.
 
-.. image:: images/comport_devmanager.png
+.. image:: images/faq/comport_devmanager.png
    :align: center
 
 Measurement Configuration
