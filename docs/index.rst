@@ -24,10 +24,13 @@ Contents:
    utilities
    howtos
    faq
-   changelog
    fileformat
    development
-   
+
+
+.. todo:: Removed outdated Imspector changelog. If needed, copy another more updated changelog automatically and
+          include it.
+
 
 * :ref:`search`
 

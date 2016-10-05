@@ -28,23 +28,31 @@ B&H software. Most of them are self explanatory and this documentation may grow 
 Multi-channel measurements
 ***************************
 
-To use a router in order to record several channels, enter the appropriate channel number. In the 'Map to stacks ...' entry you can enter a list of stack names separated by ':'. You need exactly as many channels as there are router channels. For example 
+To use a router in order to record several channels, enter the appropriate channel number. In the 'Map to stacks ...'
+entry you can enter a list of stack names separated by ':'. You need exactly as many channels as there are router
+channels. For example
 
 **Ch1:Ch2:Ch3:Ch1** 
 
-would be a valid string when using four channels. It would acquire 3 data stacks, mapping channels 1 and 4 to a stack named 'Ch1', channel 2 to a stack named 'Ch2' etc.
+would be a valid string when using four channels. It would acquire 3 data stacks, mapping channels 1 and 4 to a stack
+ named 'Ch1', channel 2 to a stack named 'Ch2' etc.
 
 Global Timegates
 *****************
 
 Importantly, if 'Generate Histogram' is not selected and no FIDA analysis is to be applied, timegates can be chosen.
 
-Either check 'Global Timegate'. This enables a global timegate for all channels. The configuration string is of the form '<b1>-<e1>[&<b2>-<e2>]...', i.e. a list of bin ranges to be included in the histogram separated by '&' characters (',' characters are also allowed due to backwards compatibility).
+Either check 'Global Timegate'. This enables a global timegate for all channels. The configuration string is of the
+form '<b1>-<e1>[&<b2>-<e2>]...', i.e. a list of bin ranges to be included in the histogram separated by '&' characters
+(',' characters are also allowed due to backwards compatibility).
 
 Channel-specific Timegates
 ***************************
 
-Alternatively, global timegates can be de-selected and the channel mapping can be used to apply timegates. Instead of a simple name, the entry for a physical routing channel can consist of a list of assignments, separated by commas. Each assignment in turn has the form '<b1>-<e1>[&<b2>-<e2>]...@<name>' assigning one or several ranges of bins to a stack labelled with <name>. For example with one routing channel:
+Alternatively, global timegates can be de-selected and the channel mapping can be used to apply timegates. Instead
+of a simple name, the entry for a physical routing channel can consist of a list of assignments, separated by commas.
+Each assignment in turn has the form '<b1>-<e1>[&<b2>-<e2>]...@<name>' assigning one or several ranges of bins to a
+stack labelled with <name>. For example with one routing channel:
 
 **10-40&50-80@Ch2,90-220@Ch1**
 

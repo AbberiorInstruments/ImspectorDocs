@@ -4,12 +4,14 @@
 Quickstart
 =================
 
+.. todo:: Is Imspector still available for download?
+
 You can download Imspector by going to
 http://www.imspector.de/downloads
 and logging in. If you have no credentials, fill out the contact form found at http://www.imspector.de, indicate
 your intended use of the program and wait for confirmation.
 
-Your download contains the program itself along with a few data analyis plugins and drivers for
+Your download contains the program itself along with a few data analysis plugins and drivers for
 
 - VidCap (for most webcams) 
 - SimCam (a simulated camera for testing) 
@@ -25,18 +27,17 @@ and, if you have licensed Imspector and some drivers possibly for
 - Various CCD cameras
  
 .. warning::
-   Drivers are simply dll's that Interface Imspector to the drivers you install with
-   your hardware. They have to be compatible with both, the version of Imspector used
-   and the version of the hardware drivers and support dll's installed on your system. 
-   Always download all necessary drivers together with a new version of Imspector. And
+   Drivers are simply dll's that Interface Imspector to the drivers you install with your hardware. They have to
+   be compatible with both, the version of Imspector used and the version of the hardware drivers and support dll's
+   installed on your system. Always download all necessary drivers together with a new version of Imspector. And
    make sure you have updated your hardware drivers.
 
 Installation
 -------------
 
-For simply running Imspector (e.g. for data analysis) all you have to do is to extract the zip Archive into a directory on your computer. Imspector will start and ask you for configuration directory.
-If this is the first time you use Imspector, create one and select it.  
-Otherwise point Imspector to your
+For simply running Imspector (e.g. for data analysis) all you have to do is to extract the zip Archive into a
+directory on your computer. Imspector will start and ask you for configuration directory. If this is the first time
+you use Imspector, create one and select it. Otherwise point Imspector to your
 existing directory.
 
 .. note::
@@ -64,7 +65,7 @@ To avoid an error message upon startup, explicitely disable logging for now.
 Adding devices
 ---------------
 
-Go to :menuselection:`&Hardware -> &Add/Remove Devices` to add devices and then 
+Go to :menuselection:`&Hardware --> &Add/Remove Devices` to add devices and then
 click on the add button of the list box. You get a dialog with a combo 
 list. Choose the device type. you will be asked a name. 
 Choose one that is recognized by you and other potential users and keep in 
@@ -80,19 +81,19 @@ Adjust the hardware settings
 ----------------------------
 
 Hardware settings are set in :menuselection:`&Hardware --> &Configure`. Usually you
-will have to enter an identifier for the device. After ajusting the settings  
+will have to enter an identifier for the device. After adjusting the settings
 press initialize to see whether the device was found and can be 
 configured using your chosen settings. 
 
 .. note:: 
-   The device id for th NI card is a string, e.g. "Dev1" and can be found in the 
+   The device id for the NI card is a string, e.g. "Dev1" and can be found in the
    measurement & automation explorer. For NIDAQ cards you should restart Imspector
-   right after intializing it for the first time and saving the hardware settings
+   right after initializing it for the first time and saving the hardware settings
    because the the number of available channels (and thus the configuration of 
    the settings dialogs) depends on the device model.  
-   The um -> Volts mapping is done in the Hardware settings of the NiCard 
-   after the restart (extra page with a channel selector and the possiblility 
-   to set min and max Volts and the corresponding area your scanner will do)
+   The µm -> Volts mapping is done in the Hardware settings of the NiCard
+   after the restart (extra page with a channel selector and the possibility
+   to set min and max Volts and the corresponding area your scanner will do).
  
 Configuring a measurement
 -------------------------
@@ -120,35 +121,35 @@ device that also creates the sync pulses.
 
 All other devices have to acknowledge that they can deal with the synced
 axis and must be configured to listen to the sync pulses (and tell the 
-framework about it)
+framework about it).
 
 Measuring with just one NiDAQmx card
 ------------------------------------
 
-Choose an appropriate 'sync out' for the Nicard and 'disabled'
+Choose an appropriate 'sync out' for the NI card and 'disabled'
 for sync in and set the dwell time in the 'DACs' configuration 
 page.  Also set the 'Create Sync pulses' option in the DACs configuration
 
 Select all other settings to your liking. (e.g. whether you want to 
-measure histograms or not in the spcm, AI channels in the Nicard, have
+measure histograms or not in the SPCM, AI channels in the NI card, have
 one or two counter inputs etc. Please roam the config dialogs and tell
-me what does and what doesn't make sense to you)
+me what does and what doesn't make sense to you).
 
 Select at least one analog input or a CNTR input if only using the NiDAQ 
 card. When starting the measurement, a stack should then pop up.
  
 If you need to configure the TTL outputs of the NiDAQ card, please check back
-with me.
+with us.
 
 
 Analyzing data
 ---------------
 
 All analysis functions are accessible through context menus. Right click 
-on a Stack, graph, axis, color map for those. For most of the frequently 
+on a stack, graph, axis, color map for those. For most of the frequently
 used functions there are toolbar buttons.
  
-Please write a mail with as much detail of what you intend to do and what
-you already tried if there is trouble. 
+Please write us a mail with as much detail of what you intended to do and what
+you already tried if there is trouble.
  
  

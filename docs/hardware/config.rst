@@ -1,6 +1,5 @@
 Hardware Configuration
 ------------------------------
 
-Some stuff
-
+.. todo:: Empty
 

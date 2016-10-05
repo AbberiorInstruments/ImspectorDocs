@@ -2,32 +2,57 @@
 Deconvolution
 =====================================
 
-In this chapter practical tips for performing a deconvolution of microscopic data with Imspector is given. First, some general remarks:
+In this chapter practical tips for performing a deconvolution of microscopic data with Imspector is given. First,
+some general remarks:
 
-Deconvolution is often used in image processing to remove the influence of the properties of your imaging device (represented by the Point Spread Function (PSF)) on the acquired image. The image is thereby assumed to be a convolution of the original object (dye molecules) distribution and the imaging device's PSF (point spread function aka blurring function), all of which is additionally distorted by ever present noise of mostly gaussian or poissonian statistics.
+* Deconvolution is often used in image processing to remove the influence of the properties of your imaging device
+  (represented by the Point Spread Function (PSF)) on the acquired image. The image is thereby assumed to be a
+  convolution of the original object (dye molecules) distribution and the imaging device's PSF (point spread function aka blurring function),
+  all of which is additionally distorted by ever present noise of mostly Gaussian or Poisson statistics.
 
-While the resolution of your image cannot be improved by deconvolution in a strict sense (i.e. information cannot be added if it is not already there), the deconvolved image is often less affected by imaging noise as a side effect. The obtained representation is often interpreted as the best estimate for the unkown object which was to be measured. The goal of deconvolution is to find this best estimate.
+* While the resolution of your image cannot be improved by deconvolution in a strict sense (i.e. information cannot be
+  added if it is not already there), the deconvolved image is often less affected by imaging noise as a side effect.
+  The obtained representation is often interpreted as the best estimate for the unkown object which was to be
+  measured. The goal of deconvolution is to find this best estimate.
 
-However, especially for very dark images with a low number of collected counts (photons, ...) the usual deconvolution algorithms have to be applied with great care - the removal of noise also removes part of the information and we can end up with an useless or artifact-containing estimate. Also be aware that the deconvolved image is only an estimate of the object and can have systematic differences depending on the parameter of the deconvolution algorithm. Even small distances between peaks are normally preserved, however widths of objects in the order of the resolution can hardly be quantified (and indeed should not) and are somewhat arbitrary.
+* However, especially for very dark images with a low number of collected counts (photons, ...) the usual
+  deconvolution algorithms have to be applied with great care - the removal of noise also removes part of the information
+  and we can end up with an useless or artifact-containing estimate. Also be aware that the deconvolved image is only
+  an estimate of the object and can have systematic differences depending on the parameter of the deconvolution algorithm.
+  Even small distances between peaks are normally preserved, however widths of objects in the order of the
+  resolution can hardly be quantified (and indeed should not) and are somewhat arbitrary.
 
-The deconvolution method allows to incorporate certain a-priori knowledge, like the positivity of the object or boundaries on the variation of objects. These are implemented for example by regularization parameter in Imspector.
+The deconvolution method allows to incorporate certain a-priori knowledge, like the positivity of the object or
+boundaries on the variation of objects. These are implemented for example by regularization parameter in Imspector.
 
-And as a last thing: deconvolution can also be done only partly, e.g. when removing the sidelobes of the PSF of a 4Pi microscope.
+And as a last thing: deconvolution can also be done only partly, e.g. when removing the side lobes of the PSF of a
+4Pi microscope.
 
 Creating an idealized PSF
 ----------------------------
 
-For a deconvolution process the knowledge about the PSF of the imaging system is mandatory. The measurement of the PSF is often compromised by noise itself, most of the times only parameters like its width are known with high significance. Sometimes the shape of the PSF can be approximated well by a gaussian or a lorentzian peak. In this case there is an easy way to compute such a PSF in Imspector to have it ready, when it is needed for deconvolution.
+For a deconvolution process the knowledge about the PSF of the imaging system is mandatory. The measurement of the
+PSF is often compromised by noise itself, most of the times only parameters like its width are known with high significance.
+Sometimes the shape of the PSF can be approximated well by a Gaussian or a Lorentzian peak. In this case there is an
+easy way to compute such a PSF in Imspector to have it ready, when it is needed for deconvolution.
 
-We demonstrate the creation of a data stack containing a single gaussian or lorentzian peak in the center of a data stack in 2D or 3D here. The more general task to compute am arbitrary function with arguments being a data stack is discussed elsewhere but very closely related.
+We demonstrate the creation of a data stack containing a single gaussian or lorentzian peak in the center of a data stack in 2D or 3D here.
+The more general task to compute am arbitrary function with arguments being a data stack is discussed elsewhere but
+very closely related.
 
 .. figure:: images/deconv_psf1.jpg
 
-   The image stack (upper middle) is a 2D stack with the offset set at minus half the stack length, as can be seen in :command:`Stack Size \& Data Type (Ctrl.+T)`. Selecting this stack in the :command:`Analysis/Arithmetics` menu, applying a function definition as explained in the text and clicking on :command:`Go` creates a new stack with identical dimensions and the image of a PSF.
+   The image stack (upper middle) is a 2D stack with the offset set at minus half the stack length, as can be seen
+   in :command:`Stack Size \& Data Type (Ctrl.+T)`. Selecting this stack in the :command:`Analysis/Arithmetics` menu,
+   applying a function definition as explained in the text and clicking on :command:`Go` creates a new stack with identical
+   dimensions and the image of a PSF.
 
 .. figure:: images/deconv_psf2.jpg
 
-   The image stack (upper middle) is a 3D stack with the offset set as needed. Selecting this stack in the :command:`Analysis/Arithmetics` menu, applying a function definition as explained in the text and clicking on :command:`Go` creates a new stack with identical dimensions and the image of a PSF. The new stack is displayed at frame zero for default, scroll to the middle frame of the stack (:command:`Pg.Up/Down`) to see the PSF's shape.}
+   The image stack (upper middle) is a 3D stack with the offset set as needed. Selecting this stack in the
+   :command:`Analysis/Arithmetics` menu, applying a function definition as explained in the text and clicking on
+   :command:`Go` creates a new stack with identical dimensions and the image of a PSF. The new stack is displayed at
+   frame zero for default, scroll to the middle frame of the stack (:kbd:`Page up / down`) to see the PSF's shape.}
 
 Here is the recipe:
 
@@ -65,31 +90,35 @@ Convolution
 
 .. figure:: images/deconv_conv.jpg
 
-   Demonstration of the convolution of two data stacks. The direction in the dialog should be set to convolve. First select two data stacks in the fields Raw Data and PSF. Both stacks must have same data type and stack size. Then click on Initialize and Go. The convolved image will be computed. Leave the dialog with click on Done.}
+    Demonstration of the convolution of two data stacks. The direction in the dialog should be set to convolve.
+    First select two data stacks in the fields Raw Data and PSF. Both stacks must have same data type and stack size.
+    Then click on Initialize and Go. The convolved image will be computed. Leave the dialog with click on Done.}
 
-Smoothing is probably the easiest way to improve an image and is recommended especially for images with only a few counts where noise is 
-the largest problem.. The blurring effect of the PSF is here not removed but even more enhanced. However, the noise is greatly reduced. 
-The smoothing kernel will be in most cases a gaussian function. That means we have to provide a stack with equal physical and logical 
-dimensions as the image stack (up to 4D possible) containing a centered gaussian function of certain width. Convolution of these two 
-stacks (the order of the stacks can be exchanged thereby) is then performed via the menu command: 
-:command:`Analysis/Deconvolution/Linear` as shown in figure \ref{fig:deconv_conv}.
+Smoothing is probably the easiest way to improve an image and is recommended especially for images with only a few
+counts where noise is the largest problem. The blurring effect of the PSF is here not removed but even more
+enhanced. However, the noise is greatly reduced. The smoothing kernel will be in most cases a gaussian function. That
+means we have to provide a stack with equal physical and logical dimensions as the image stack (up to 4D possible)
+containing a centered gaussian function of certain width. Convolution of these two stacks (the order of the stacks
+can be exchanged thereby) is then performed via the menu command: :command:`Analysis/Deconvolution/Linear` as shown in
+figure \ref{fig:deconv_conv}.
 
 
 Point Deconvolution
 ----------------------
 
-TODO! Added later, important for 4Pi-data.
+.. todo:: Empty.
 
 Wiener Filtering
 -----------------------
 
-Wiener Filtering or linear deconvolution is the optimal procedure when the image is compromised with gaussian noise. Its algorithm
-is based in fourier space where the convolution of PSF and object is represented by a simple multiplication. The reverse operation, 
-the division is therefore simple to implement and will fail only where the fourier transform of the PSF (the optical transfer 
-function, OTF) is zero or has a small amplitude. These is unfortunately true for many high spatial frequencies in all pratical 
-cases, therefore a regularization factor has to be added that dampens frequencies that were not transmitted very well and are 
-dominated by noise and cannot be restorated therefore. The way to do it in the programm is via the menu command:
-:command:`Analysis/Deconvolution/Linear` as shown in figure \ref{fig:deconv_lin}.
+Wiener Filtering or linear deconvolution is the optimal procedure when the image is compromised with gaussian noise.
+Its algorithm is based in fourier space where the convolution of PSF and object is represented by a simple
+multiplication. The reverse operation, the division is therefore simple to implement and will fail only where the
+fourier transform of the PSF (the optical transfer function, OTF) is zero or has a small amplitude. These is
+unfortunately true for many high spatial frequencies in all practical cases, therefore a regularization factor has to
+ be added that dampens frequencies that were not transmitted very well and are dominated by noise and cannot be
+ restorated therefore. The way to do it in the programm is via the menu command:
+ :command:`Analysis/Deconvolution/Linear` as shown in figure \ref{fig:deconv_lin}.
 
 .. figure:: images/deconv_lin.jpg
 

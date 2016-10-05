@@ -4,8 +4,11 @@ Camera Drivers
 SpecCam Based Camera Drivers
 *********************************
 
+
 Common Settings and Functions
 ................................
+
+.. todo:: Empty
 
 Specifics of some Frequently Used Drivers
 ............................................
@@ -21,8 +24,10 @@ Specifics of some Frequently Used Drivers
 Decrepated non-standard Camera Drivers
 *****************************************
 
+
 Apogee Drive
 ................
 
-This driver is decrepated. You can use it as a fallback for old apogee cameras for wich the ApogeeAlta driver does not work.
+This driver is deprecated. You can use it as a fallback for old apogee cameras for which the ApogeeAlta driver does
+not work.
 

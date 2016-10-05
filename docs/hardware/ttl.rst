@@ -2,23 +2,23 @@
 TTL Channels
 #######################################
 
-There is a generic interface to TTL channels that are e.g. provided
-by :ref:`NiDAQmx`. It allows you to configure switching sequences etc. 
+There is a generic interface to TTL channels that are e.g. provided by :ref:`NiDAQmx`. It allows you to configure
+switching sequences etc.
 
-Devices providing such generic channels usually have sub-pages to their measurement
-configuration pages:
+Devices providing such generic channels usually have sub-pages to their measurement configuration pages:
 
 .. image:: images/docdlg_ttl.png
    :align: center
 
 Wait times
 ----------
-All wait times refer to switching that goes on during a step on a non-synced axis. Along synced axes, all timing
-is governed by the dwell time and a TTL channel can only switch once per step on the fastest axis. On higher 
-synced axes, the time between switches is given by the dwell time per pixel.
+All wait times refer to switching that goes on during a step on a non-synced axis. Along synced axes, all timing is
+governed by the dwell time and a TTL channel can only switch once per step on the fastest axis. On higher synced
+axes, the time between switches is given by the dwell time per pixel.
 
 *After each switch*
-   If a any of the TTL channels has selected a sequence as action that defines a pattern of several switches before the step, this is the wait time between consecutive switches. All patterns are put out simultaneously.
+   If a any of the TTL channels has selected a sequence as action that defines a pattern of several switches before
+   the step, this is the wait time between consecutive switches. All patterns are put out simultaneously.
 
 *After last switch (before step)*
    The time to wait after all pattern are output before the exposure / measurement of the step is started.
@@ -33,19 +33,23 @@ A quick overview over the settings of all channels that are not off.
 Channel action settings
 ------------------------
 
-These settings control the behaviour of a TTL channel during the measurement. You select the channel to be configured through the *Channel* combo box.
+These settings control the behaviour of a TTL channel during the measurement. You select the channel to be configured
+through the *Channel* combo box.
 
 **Axis**
-  If action is sequence, this defines the action axis. Upon each move along this axis, the TTL channel moves through its sequence. If a synced axis
-  is selected different rules apply to how the sequence setting is interpreted. See [_TTLsynced]_ for details.
-  Please note that you can select the split axis which is defined in the Measurement settings. This allows you e.g. to acquire two images with 
-  different TTL settings. Frequently this is used for taking a STED and a confocal image simultaneously.
+  If action is sequence, this defines the action axis. Upon each move along this axis, the TTL channel moves through
+  its sequence. If a synced axis is selected different rules apply to how the sequence setting is interpreted. See
+  [_TTLsynced]_ for details. Please note that you can select the split axis which is defined in the Measurement
+  settings. This allows you e.g. to acquire two images with different TTL settings. Frequently this is used for
+  taking a STED and a confocal image simultaneously.
 
 **Action**
   Valid actions are
 
   *Do nothing*
-     No action is performed. The TTL channel stays in the state it had before the measurement. If the state is changed through the live dialog (see below) this state will remain after the measurement unless the 'Final Position' parameter is set.
+     No action is performed. The TTL channel stays in the state it had before the measurement.
+     If the state is changed through the live dialog (see below) this state will remain after the measurement unless
+     the 'Final Position' parameter is set.
   *Keep high*
      During each exposure the TTL channel will be high. This can be changed to *Keep high* during the measurement through the live dialog.
   *Keep low*

@@ -1,14 +1,17 @@
 A little KB
 =============
 
-There is no comprehensive guide to the data model, the SDK and the class hierachy in Imspector and most probably this will only become available after adding python scripting support. For now, there is a small collection of topics that we stumble upon.
-The following information may be incomplete, inaccurate or plain wrong depending on when it was added and what was changed afterwards.
+There is no comprehensive guide to the data model, the SDK and the class hierarchy in Imspector and most probably this
+will only become available after adding python scripting support. For now, there is a small collection of topics
+that we stumble upon. The following information may be incomplete, inaccurate or plain wrong depending on when it was
+added and what was changed afterwards.
 
 SpecDll versions, revisions and module revisions
 -------------------------------------------------
 
-The Imspector solution and/or SDK contains a few python scripts and associated batch files that add the current subversion revision of various modules to header files as defines. Currently the rationale is as follows: 
-A plugin's file where the CWinApp::InitInstance method is implmented imports either <SpecInitialize.h>:
+The Imspector solution and/or SDK contains a few python scripts and associated batch files that add the current
+subversion revision of various modules to header files as defines. Currently the rationale is as follows:
+A plugin's file where the CWinApp::InitInstance method is implemented imports either <SpecInitialize.h>:
 
 
 .. code-block:: cpp
@@ -186,5 +189,3 @@ in the comment below.
 See `this forum post`__ for details.
 
 __ http://connectppe.microsoft.com/VisualStudio/feedback/details/563622/mfc-default-exception-handling-causes-problems-with-activation-context
-    
-

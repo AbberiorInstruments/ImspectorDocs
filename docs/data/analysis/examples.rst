@@ -7,9 +7,9 @@ Scale stack content about a factor a without changing the stack size
 Solution using the Interpolation-function:
 +++++++++++++++++++++++++++++++++++++++++++
 
-1. Obtain the size of the stack in pixel (using Ctrl + T) 
+1. Obtain the size of the stack in pixel (using :kbd:`ctrl + t`)
 2. Using 'Analysis'-'Interpolation' create a new stack with size $aN_i$ (possible rounding errors!)
-3. Change the stack size of the interpolated stack (using Strg. + T) to the old size and chose thereby the middle of the interval in pase position (whatever the signs are) 
+3. Change the stack size of the interpolated stack (using kbd:`ctrl + t`) to the old size and chose thereby the middle of the interval in pase position (whatever the signs are)
 
 Solution using Analysis/Arithmethics:
 +++++++++++++++++++++++++++++++++++++++

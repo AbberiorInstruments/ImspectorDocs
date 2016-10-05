@@ -7,13 +7,13 @@ The Imspector MSR File Format
 
 The Imspector '.msr' file format is a native binary format and now api exists to read or write it in its entirety.
 As window positions, data dependencies, hardware configuration and settings measurement state and configuration 
-settings are saved in each document reading the entirety of this information is hardly desireable for other programs. 
+settings are saved in each document reading the entirety of this information is hardly desirable for other programs.
 The file format evolves with Imspector but old files will always remain readable with newer versions of Imspector 
 or a conversion tool will be made available.
 
 The data and directly associated meta-data contained in any Imspector file is organized according to the specification
-of the OBF (\*.obf) file format and Imspector also reads OBF files in an intuitive way. There are bindins for OBF to
-both c++, MATLAB and JAVA and we are working on Labview and Python bindings to allow reading of Imspector data into 
+of the OBF (\*.obf) file format and Imspector also reads OBF files in an intuitive way. There are bindings for OBF to
+both c++, Matlab and Java and we are working on Labview and Python bindings to allow reading of Imspector data into
 most applications used in scientific data analysis and to allow writing to an Imspector-readable format 
 from Labview. 
 
@@ -36,7 +36,7 @@ The OBF File Format
 While it is recommended that you use the ANSI-C or C++ interface provided by the **OmasIo**
 dll to read and write OBF files the file structure is relatively 
 simple and it should be straightforward to implement a reader or writer for OBF files. 
-A native OBF file starts with the following binary file header. Please note that alll structures saved in
+A native OBF file starts with the following binary file header. Please note that all structures saved in
 binary format into an OBF file have packsize 1 and that all binary data is stored in little endian 
 byte order (i.e. the byte order used on x86, x64, Itanium and Alpha platforms) 
 
@@ -353,7 +353,7 @@ flush positions as outlined above.
    While simply writing SI units as a string in a certain format would have been simpler and
    would have allowed to display the units directly in a simple reader (and have them written
    more easily after user input) this format was chosen as it allows bindings to existing
-   units implementations i.e. in C/C++, Python and MATLAB more easily. 
+   units implementations i.e. in C/C++, Python and Matlab more easily.
    
    For C/C++ OmasIo contains a simple formatter and parser for unit strings into this format.
    
@@ -400,8 +400,8 @@ byte order. If :cppcode:`header[24] == 1` it is 32bit floating point (float), ot
 The OmasIo API, Bindings
 ------------------------
 The **OmasIo** library implements the OBF and DBL file format providing both a C++ 
-interface to OBF files. There are bindings using the C++ implementation for both MATLAB
-and Python and in addition, a pure JAVA implementation of a reader is in the process
+interface to OBF files. There are bindings using the C++ implementation for both Matlab
+and Python and in addition, a pure Java implementation of a reader is in the process
 of becoming part of `BioFormats <http://loci.wisc.edu/software/bio-formats/>`_.
 
 .. note:: 
@@ -428,24 +428,24 @@ description, preferably formatted as xml in a way compatible to the output of th
 :cppcode:`omas_export_xml()` function in the *OmasIo* library, described in a seperate 
 section. In C++, the easiest way to do this is to write the meta information into an 
 :cppcode:`OProp` object and actually use the :cppcode:`omas_export_xml()` function 
-to convert it to an xml string. For MATLAB and Python, toolboxes are provided that 
+to convert it to an xml string. For Matlab and Python, toolboxes are provided that
 can convert a (complex) variable into a compatible xml string and back. In fact these 
 toolboxes, too first map the data into an  :cppcode:`OProp` variable and then export 
 it to xml and vice versa.
 
-The  :cppcode:`OProp` data model is strongly based on the MATLAB data model. Data is
+The  :cppcode:`OProp` data model is strongly based on the Matlab data model. Data is
 organized in arrays of arbitrary numeric complex or real data type and arbitrary rank 
-(with the special case of a scalar, which is a 1x1 array in MATLAB), cell arrays (where 
+(with the special case of a scalar, which is a 1x1 array in Matlab), cell arrays (where
 each cell can contain data of a different type), structs (where each member is 
 addressed by its name and can contain arbitrary data) and arrays of structs (with identical 
-fields). In MATLAB strings are one-dimensional character arrays. MALAB string arrays  
+fields). In Matlab strings are one-dimensional character arrays. Matlab string arrays
 therefore will always contain strings of equal length (with shorter strings simply padded
 by NULL bytes). The toolbox will convert these to cell arrays of strings tagged with
 a special flag. On the C++ side they will look like cell arrays of strings but as long
-as the tag is untouched they will be converted back to string arrays on the MATLAB side.
-Please note that usually it is preferrable to use cell arrays of strings on the MATLAB
+as the tag is untouched they will be converted back to string arrays on the Matlab side.
+Please note that usually it is preferrable to use cell arrays of strings on the Matlab
 side to start with. Also, :cppcode:`OProp` knows empty 'cells' (an :cppcode:`OProp` with 
-no content) which is mapped to an empty 'double' array in MATLAB.
+no content) which is mapped to an empty 'double' array in Matlab.
 There are similar mapping issues with other bindings like Python. The general Ansatz is
 that variables converted to xml by one language binding will produce the same variable
 when read back directly but that there is no guarantee that this applies once a property

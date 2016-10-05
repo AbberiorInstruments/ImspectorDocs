@@ -1,14 +1,15 @@
 The Arithmetic Plugin
 *************************
 
-The Analysis/Arithmetics plugin is used to create new data stacks from existing data stacks and the relation between the old and the new
-data is given as a function.
+The Analysis/Arithmetics plugin is used to create new data stacks from existing data stacks and the relation between
+the old and the new data is given as a function.
 
-One or two Stacks can be selected (upper left panel of the Arithmetics dialog). The format of the data values of the output stack is
-selected below. On the right upper panel you either select a pre-determined function (Scale, Add, Subtract, Multiply, Divide, Offset, Invert,
-Normalize) which obvious meanings of the parameters and requiring one (scale, offset, invert, nomalize) or two (add, subtract, multiply,
-divide) input stacks. The last option (Function) allows to input an arbitrary term (edit box in the lower part) which is then evaluated for
-every position and data value of the input stack(s) and determines the values of the output stack.
+One or two Stacks can be selected (upper left panel of the Arithmetics dialog). The format of the data values of the
+output stack is selected below. On the right upper panel you either select a pre-determined function (Scale, Add,
+Subtract, Multiply, Divide, Offset, Invert, Normalize) which obvious meanings of the parameters and requiring one
+(scale, offset, invert, nomalize) or two (add, subtract, multiply, divide) input stacks. The last option (Function)
+allows to input an arbitrary term (edit box in the lower part) which is then evaluated for every position and data
+value of the input stack(s) and determines the values of the output stack.
 
 The output stack can re-evaluate itself, should the data of the input stack change (Watch checkbox).
 

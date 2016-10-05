@@ -2,6 +2,8 @@
 How to Contribute
 =================
 
+.. todo:: Github and Readthedocs workflow not described here.
+
 You are welcome to correct any errors and contribute yourself to this documentation. 
 
 Correct Mistakes

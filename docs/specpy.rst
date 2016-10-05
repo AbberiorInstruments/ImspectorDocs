@@ -4,9 +4,8 @@
 Imspector Python Interface
 ==========================
 
-Imspector comes with a Python Interface named SpecPy which can be used either 
-from the embedded Python console or from an external Python console running on 
-the same computer (to enable sharing of measurement data) or even running on a 
+Imspector comes with a Python Interface named SpecPy which can be used either from the embedded Python console or
+from an external Python console running on the same computer (to enable sharing of measurement data) or even running on a
 different computer. 
 
 --------------------
@@ -15,8 +14,8 @@ Setup
 
 To setup SpecPy you first need to install
 
-- Python 3.5.1 together with
-- NumPy 1.10.4
+- Python >= 3.5 together with
+- NumPy >= 1.10
 
 Then from the Command Prompt run
 
@@ -649,7 +648,9 @@ data values of the stack to those of the array,
 
   stack.meta_data()
 
-returns the meta data of the stack as a dictionary of name value pairs (amongst others the units of the pixels are given there and are valid for the pixel sizes and well as the stack lengths, i.e. the pixel sizes are the division of the stack lengths by the stack sizes).
+returns the meta data of the stack as a dictionary of name value pairs (amongst others the units of the pixels are given
+there and are valid for the pixel sizes and well as the stack lengths, i.e. the pixel sizes are the division of the
+stack lengths by the stack sizes).
 
 --------------------
 Examples
