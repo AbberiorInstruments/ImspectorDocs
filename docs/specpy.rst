@@ -30,7 +30,7 @@ Start
 - Working from an external Python console you need to start the Imspector 
   Server (with requires Administrator permissions the first time):
 
-.. figure:: images/ImspectorRunServer.png
+.. figure:: images/specpy/imspector_run_server.png
 
 - To load the Python Interface just say
 
@@ -656,14 +656,7 @@ stack lengths by the stack sizes).
 Examples
 --------------------
 
-`Save <specpy_examples.zip>`_ examples.
+.. toctree::
+   :maxdepth: 2
 
-- :ref:`specpy_example_hello_imspector`
-- :ref:`specpy_example_data_analysis`
-- :ref:`specpy_example_measurement`
-
---------------------
-Collection of Python scripts depending on SpecPy
---------------------
-
-See `link <https://v1020-trac.mpibpc.mpg.de/wiki/ImSpecPythonApps>`_. Internal access only.
+   specpy/specpy_examples
