@@ -9,9 +9,11 @@ During configuration Imspector has to be restarted once to allow the driver to r
 out (AO), analog in (AI), TTL (TO) and counter (CI) channels. Create a new device and enter the device id as found in
 the Measurement&Automation explorer into the configuration dialog.
 
-.. figure:: ../images/hardware/nidaqmx_main.png
+.. image:: ../images/hardware/nidaqmx_main.png
+   :align: center
 
 Initialize the device by pressing the 'Init' button. Then restart Imspector and return to the configuration dialog.
 It should now include additional device information.
 
-.. figure:: ../images/hardware/nidaqmx_main_ready.png
+.. image:: ../images/hardware/nidaqmx_main_ready.png
+   :align: center

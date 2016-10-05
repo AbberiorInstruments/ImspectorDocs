@@ -10,15 +10,18 @@ Features
 --------
 
 .. figure:: images/intro/customization.jpg
+   :align: center
 
    Customization of toolbars, menus and shortcuts.
 
 .. figure:: images/intro/workspace.jpg
+   :align: center
 
    The workspace allows you to keep track of all your measurements, temporarily hide documents to keep the desktop
    clean and it provides access to all parameters relevant for the current measurement or analysis.
 
 .. figure:: images/intro/new_device.jpg
+   :align: center
 
    Add new devices derived from standard or custom drivers.
 
@@ -30,10 +33,12 @@ point-spread functions and simple linear de-convolution, frequency filtering etc
 de-convolution is also included.
 
 .. figure:: images/intro/parser.jpg
+   :align: center
 
    Use the built-in parser to analyse and process your data.
 
 .. figure:: images/intro/analysis.jpg
+   :align: center
 
    Nonlinear fitting of single data curves or e.g. along the time axis of a TCSPC stack in each spatial point.
 
@@ -54,10 +59,12 @@ synchronization of different devices and the coordination of data readout, analy
 measurement.
 
 .. figure:: images/intro/docsettings.jpg
+   :align: center
 
    An intuitive GUI allows you to adjust your measurement parameters.
 
 .. figure:: images/intro/setasroi.jpg
+   :align: center
 
    All measurement parameters are remembered. So you can derive measurements from previous 
    ones, image regions of interest etc.

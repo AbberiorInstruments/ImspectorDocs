@@ -4,7 +4,7 @@ FAQ
 
 This is a collection of common problems people encounter when using Imspector. Some are common misconceptions or
 connected to bugs or shortcomings in other software / hardware, but most of them will probably be due to a bug or at
-least an unintuitive feature of Imspector itself. In all cases a possible workaround is suggested. 
+least an unintuitive feature of Imspector itself. In all cases a possible workaround is suggested.
 
 Errors During Startup
 ----------------------

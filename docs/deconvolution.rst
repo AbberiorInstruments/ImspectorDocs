@@ -1,5 +1,5 @@
 =====================================
-Deconvolution
+Image Deconvolution
 =====================================
 
 .. role:: parser(emphasis)
@@ -43,6 +43,7 @@ The more general task to compute am arbitrary function with arguments being a da
 very closely related.
 
 .. figure:: images/deconvolution/psf1.jpg
+   :align: center
 
    The image stack (upper middle) is a 2D stack with the offset set at minus half the stack length, as can be seen
    in :command:`Stack Size \& Data Type (Ctrl.+T)`. Selecting this stack in the :command:`Analysis/Arithmetics` menu,
@@ -50,6 +51,7 @@ very closely related.
    dimensions and the image of a PSF.
 
 .. figure:: images/deconvolution/psf2.jpg
+   :align: center
 
    The image stack (upper middle) is a 3D stack with the offset set as needed. Selecting this stack in the
    :command:`Analysis/Arithmetics` menu, applying a function definition as explained in the text and clicking on
@@ -91,10 +93,11 @@ Convolution
 --------------------------
 
 .. figure:: images/deconvolution/convolution.jpg
+   :align: center
 
-    Demonstration of the convolution of two data stacks. The direction in the dialog should be set to convolve.
-    First select two data stacks in the fields Raw Data and PSF. Both stacks must have same data type and stack size.
-    Then click on Initialize and Go. The convolved image will be computed. Leave the dialog with click on Done.}
+   Demonstration of the convolution of two data stacks. The direction in the dialog should be set to convolve.
+   First select two data stacks in the fields Raw Data and PSF. Both stacks must have same data type and stack size.
+   Then click on Initialize and Go. The convolved image will be computed. Leave the dialog with click on Done.
 
 Smoothing is probably the easiest way to improve an image and is recommended especially for images with only a few
 counts where noise is the largest problem. The blurring effect of the PSF is here not removed but even more
@@ -123,6 +126,7 @@ restorated therefore. The way to do it in the program is via the menu command:
 :command:`Analysis/Deconvolution/Linear` as shown in figure \ref{fig:deconv_lin}.
 
 .. figure:: images/deconvolution/linear.jpg
+   :align: center
 
    Demonstration of linear deconvolution of two data stacks of equal size. The direction in the dialog should be set to 
    de-convolve and the regularization parameter should be set to the smallest possible value where the artifacts (due to
@@ -150,6 +154,7 @@ The Imspector way of invoking this non-linear deconvolution method is via the :c
 menu command as illustrated in figure \ref{fig:deconv_rl}.
 
 .. figure:: images/deconvolution/rl.jpg
+   :align: center
 
    Demonstration of Richardson-Lucy deconvolution of two data stacks of equal size. First select the image and the PSF in
    the two upper lines of the dialog. This type of deconvolution is iterative, so an estimate (as starting point) can be
