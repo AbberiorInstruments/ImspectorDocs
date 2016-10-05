@@ -1,7 +1,7 @@
 A little KB
 =============
 
-There is no comprehensive guide to the data model, the SDK and the class hierachy in imspector and most probably this will only become available after adding python scripting support. For now, there is a small collection of topics that we stumble upon.
+There is no comprehensive guide to the data model, the SDK and the class hierachy in Imspector and most probably this will only become available after adding python scripting support. For now, there is a small collection of topics that we stumble upon.
 The following information may be incomplete, inaccurate or plain wrong depending on when it was added and what was changed afterwards.
 
 SpecDll versions, revisions and module revisions

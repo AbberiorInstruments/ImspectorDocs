@@ -30,7 +30,7 @@ and install it on your computer. Imspector should now start.
 Registering Hardware Ports takes too long.
 *******************************************
 
-During startup, imspector will take a long time before displaying 'Registring devices' or, in version since *v0.10rev4881*, display a message **Registering hardware ports ... [Press and hold SHIFT + ESC to cancel]** in the splash screen. 
+During startup, Imspector will take a long time before displaying 'Registring devices' or, in version since *v0.10rev4881*, display a message **Registering hardware ports ... [Press and hold SHIFT + ESC to cancel]** in the splash screen.
 The most probable cause of this is that you have some USB to serial or parallel port bridges installed that announce ports but produce errors when accessing them. The reason for the delay are long timeouts. In older Imspector versions you have to wait and, to speed up future startups try some of the solutions below. 
 In newer Imspector versions the problem is eliminated for serial ports, where initialization does no longer test-open the port. Thus all ports present in the Device Manager (seen by the OS) will be added to the list but if you have a bad bridge, opening them will fail when initializing a com device using them. While the problem has never been reported for parallel ports they are test-opened to find out their capabilities and thus a delay may still occur. In this case you can continue by pressing SHIFT + ESC and the registration will continue in the background. When you try accessing serial or parallel ports immediatedly after this (before initialization has finished) they may be missing from the list of available ports.
 

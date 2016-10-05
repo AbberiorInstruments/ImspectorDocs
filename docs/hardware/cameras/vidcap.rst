@@ -4,7 +4,7 @@ Cameras with DirectShow Drivers
 Some, usually lower end, cameras come with DirectShow drivers which allow Imspector to drive them using a generic driver. The driver is tested with the following models:
 
 *mvBlueFox* (`Matrix Vision <http://www.matrix-vision.com/bildverarbeitungshardware.html>`_)
-   Produced by Matrix Vision. Plese install the appropriate driver from Matrix vision and test the camera using the software that comes with it before trying to use it with imspector. 
+   Produced by Matrix Vision. Plese install the appropriate driver from Matrix vision and test the camera using the software that comes with it before trying to use it with Imspector.
    In order to use the DirectShow driver you have to run the Matrix Vision configuration tool (mvDeviceConfigure.exe). Here you can set the DirectShow friendly name (the name which will show up in Imspector) and you HAVE TO register the device (in the Menu, there is a DirectShow entry that allows you to do this). If you have an x64 system you have to do this separately for x64 and x86 by running both the 32bit and 64bit version of the configuration utility.
    
    A (not necessarily up-to-date) version of the drivers can be found here: `(32bit) <http://imspector.mpibpc.mpg.de/extra/drivers/mvBlueFOX.msi>`_ and `(64bit) <http://imspector.mpibpc.mpg.de/extra/drivers/beta_mvBlueFOX-x64.msi>`_.

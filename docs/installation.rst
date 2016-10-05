@@ -2,9 +2,9 @@
 Installing Imspector
 =============================
 
-If this is your first time setting up imspector please refer to the section :ref:`Quickstart` for installation instructions. The basics of setting up the configuration directory are covered in the :ref:`ConfigDir` chapter of the :ref:`ShortTutorial`.
+If this is your first time setting up Imspector please refer to the section :ref:`Quickstart` for installation instructions. The basics of setting up the configuration directory are covered in the :ref:`ConfigDir` chapter of the :ref:`ShortTutorial`.
 
-This chapter contains some more advanced aspects of setting up your measurement environment in imspector and how to set up and test your measurement-independent hardware.
+This chapter contains some more advanced aspects of setting up your measurement environment in Imspector and how to set up and test your measurement-independent hardware.
 
 Setting up the MPD panel
 --------------------------------
@@ -19,7 +19,7 @@ Currently the MPD panel is not available to parties outside the MPI. If you are 
 Install the drivers
 .......................
 
-Download the `modified FTDI drivers <http://imspector.mpibpc.mpg.de/extra/drivers/FTDI_CDM_Drivers_2.08.02.zip>`_ from the imspector website.
+Download the `modified FTDI drivers <http://imspector.mpibpc.mpg.de/extra/drivers/FTDI_CDM_Drivers_2.08.02.zip>`_ from the Imspector website.
 
 .. note::
 
@@ -44,7 +44,7 @@ In case installation just fails without asking you to provide drivers, go to the
 Run MpdCtrl.exe 
 .......................
 
-Currently the MPD panel is controlled by a separate application, MpdCtrl.exe which manages access to the panel(s) for different programs (we internally have some other applications that can share the panel with imspector). You can start MpdCtrl.exe directly from the installation directory of imspector or through the tools menu:
+Currently the MPD panel is controlled by a separate application, MpdCtrl.exe which manages access to the panel(s) for different programs (we internally have some other applications that can share the panel with Imspector). You can start MpdCtrl.exe directly from the installation directory of Imspector or through the tools menu:
 
 .. image:: images/tools_menu.png
    :align: center
@@ -69,12 +69,12 @@ if everything is just fine. You can start the app which does nothing except allo
 
 
 .. warning::
-   It is important that the MPDCtrl.exe running is the same version as the imspector executable accessing it. This is due to bad software design but will not be changes soon. If there is any trouble with thbe MPD panel, exit MPDCtrl.exe through its tray icon and restart it from the correct directory.
+   It is important that the MPDCtrl.exe running is the same version as the Imspector executable accessing it. This is due to bad software design but will not be changes soon. If there is any trouble with thbe MPD panel, exit MPDCtrl.exe through its tray icon and restart it from the correct directory.
 
 Configure the panel 
 .......................
 
-You configure the panel from the imspector main menu. Go to :menuselection:`&Edit -> &Preferences -> Configure MPD Panel`. You will see the following dialog provided that MpcCtrl.exe is running and has recognized a panel.
+You configure the panel from the Imspector main menu. Go to :menuselection:`&Edit -> &Preferences -> Configure MPD Panel`. You will see the following dialog provided that MpcCtrl.exe is running and has recognized a panel.
 
 .. image:: images/mpd_config.png
    :align: center

@@ -139,7 +139,7 @@ clearly representing artifacts. [#]_
 .. [#] Will be microns or nm in most cases. Given is the edge length of the field of view. A unit is not given, however all parameters later on have to have the same units, whatever they are.
 .. [#] The normalization in this case is so that the maximum of the stack 1 (in the center). Although sometimes 
    deconvolution algorithms expect a integral over the PSF of one (to resemble a probability distribution) this
-   does not matter here in imspector and is always (not sure) done automatically if necessary.
+   does not matter here in Imspector and is always (not sure) done automatically if necessary.
 .. [#] As a rule of thumb, we advice to adjust the parameter so that the smallest negative value present in the result is not more than 10\% in absolute value of the highest positive value.
 .. [#] For most real world application we found an regularization parameter of 1E-10 and up to 100 iterations with stopping every 10 iterations sufficient.
  

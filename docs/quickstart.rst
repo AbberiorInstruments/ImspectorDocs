@@ -4,7 +4,7 @@
 Quickstart
 =================
 
-You can download imspector by going to  
+You can download Imspector by going to
 http://www.imspector.de/downloads
 and logging in. If you have no credentials, fill out the contact form found at http://www.imspector.de, indicate
 your intended use of the program and wait for confirmation.
@@ -17,7 +17,7 @@ Your download contains the program itself along with a few data analyis plugins 
 - ComDriver (a generic driver for com/gpib devices with a simple protocol)
 - Timer (for time-lapse type measurements)
 
-and, if you have licensed imspector and some drivers possibly for 
+and, if you have licensed Imspector and some drivers possibly for
 
 - Becker&Hickl SPCM cards
 - National instruments DAQ cards (through the NiDAQmx drivers) which control scanners, shutters and read out detectors
@@ -28,7 +28,7 @@ and, if you have licensed imspector and some drivers possibly for
    Drivers are simply dll's that Interface Imspector to the drivers you install with
    your hardware. They have to be compatible with both, the version of Imspector used
    and the version of the hardware drivers and support dll's installed on your system. 
-   Always download all necessary drivers together with a new version of imspector. And
+   Always download all necessary drivers together with a new version of Imspector. And
    make sure you have updated your hardware drivers.
 
 Installation
@@ -48,7 +48,7 @@ The configuration directory can be chosen independently for each user on each co
 The directory itself can contain computer-specific configurations and also contains custom color maps,
 fit functions, formulas created by the user. Therefore it is reasonable to use one directory per user
 which is accessible from (or syhncrhonized between) computers. You can change its location at any time
-by copying/moving it and directing imspector to the new location through 
+by copying/moving it and directing Imspector to the new location through
 :menuselection:`&Edit --> &Preferences --> &Configuration Directory`.
 
 There are other useful options in this menu, too. 

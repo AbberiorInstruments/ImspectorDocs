@@ -9,7 +9,7 @@ programmed through this driver.
 What does wait/line mean?
 ..........................
 
-Line refers here to the command line, not a scan line. Wait/line is the time that imspector waits after it has send a command line. If this waiting time is to short, part of the following commands may be lost. A value of about 300ms seems to work well at 9600baud.
+Line refers here to the command line, not a scan line. Wait/line is the time that Imspector waits after it has send a command line. If this waiting time is to short, part of the following commands may be lost. A value of about 300ms seems to work well at 9600baud.
 
 What are Consts?
 .................

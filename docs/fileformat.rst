@@ -5,14 +5,14 @@ The File Format
 The Imspector MSR File Format
 ------------------------------
 
-The imspector '.msr' file format is a native binary format and now api exists to read or write it in its entirety. 
+The Imspector '.msr' file format is a native binary format and now api exists to read or write it in its entirety.
 As window positions, data dependencies, hardware configuration and settings measurement state and configuration 
 settings are saved in each document reading the entirety of this information is hardly desireable for other programs. 
 The file format evolves with Imspector but old files will always remain readable with newer versions of Imspector 
 or a conversion tool will be made available.
 
-The data and directly associated meta-data contained in any imspector file is organized according to the specification 
-of the OBF (\*.obf) file format and imspector also reads OBF files in an intuitive way. There are bindins for OBF to 
+The data and directly associated meta-data contained in any Imspector file is organized according to the specification
+of the OBF (\*.obf) file format and Imspector also reads OBF files in an intuitive way. There are bindins for OBF to
 both c++, MATLAB and JAVA and we are working on Labview and Python bindings to allow reading of Imspector data into 
 most applications used in scientific data analysis and to allow writing to an Imspector-readable format 
 from Labview. 
@@ -23,7 +23,7 @@ compatible between all versions released.
 .. note:: 
    The fact that OBF is compatible in both directions helps when reading a newer version .msr file with
    an old Imspector copy. While window positions and some analysis related data is omitted, all physical data and 
-   the associated meta-data remains readable. Just (temporally) rename the file to .obf and open it in imspector. 
+   the associated meta-data remains readable. Just (temporally) rename the file to .obf and open it in Imspector.
 
 .. note:: 
    Some older versions of Imspector do not write OBF files and used the DBL (\*.dbl) format as an exchange 
