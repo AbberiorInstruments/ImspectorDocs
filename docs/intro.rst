@@ -9,18 +9,18 @@ experimental results.
 Features
 --------
 
-.. figure:: images/intro/customization.jpg
+.. figure:: /images/intro/customization.jpg
    :align: center
 
    Customization of toolbars, menus and shortcuts.
 
-.. figure:: images/intro/workspace.jpg
+.. figure:: /images/intro/workspace.jpg
    :align: center
 
    The workspace allows you to keep track of all your measurements, temporarily hide documents to keep the desktop
    clean and it provides access to all parameters relevant for the current measurement or analysis.
 
-.. figure:: images/intro/new_device.jpg
+.. figure:: /images/intro/new_device.jpg
    :align: center
 
    Add new devices derived from standard or custom drivers.
@@ -32,12 +32,12 @@ many tools are provided that are especially useful in quantitative microscopy. T
 point-spread functions and simple linear de-convolution, frequency filtering etc. A tool for off-line nonlinear
 de-convolution is also included.
 
-.. figure:: images/intro/parser.jpg
+.. figure:: /images/intro/parser.jpg
    :align: center
 
    Use the built-in parser to analyse and process your data.
 
-.. figure:: images/intro/analysis.jpg
+.. figure:: /images/intro/analysis.jpg
    :align: center
 
    Nonlinear fitting of single data curves or e.g. along the time axis of a TCSPC stack in each spatial point.
@@ -58,12 +58,12 @@ measurements. Data readout can be synchronous or asynchronous, the program handl
 synchronization of different devices and the coordination of data readout, analysis and visualization during the
 measurement.
 
-.. figure:: images/intro/docsettings.jpg
+.. figure:: /images/intro/docsettings.jpg
    :align: center
 
    An intuitive GUI allows you to adjust your measurement parameters.
 
-.. figure:: images/intro/setasroi.jpg
+.. figure:: /images/intro/setasroi.jpg
    :align: center
 
    All measurement parameters are remembered. So you can derive measurements from previous 

@@ -14,7 +14,7 @@ Setting up the MPD panel
 The MPD panel is a custom made USB device that allows you to control the origin of scan axes. Support for
 controlling other parameters is pending.
 
-.. image:: images/installation/mpd_panel.png
+.. image:: /images/installation/mpd_panel.png
    :align: center
 
 Currently the MPD panel is not available to parties outside the MPI. If you are interested in using it, please
@@ -35,20 +35,20 @@ Download the `modified FTDI drivers <http://imspector.mpibpc.mpg.de/extra/driver
 Unpack the drivers to your local hard drive, connect the panel. When asked you should choose to manually point
 windows to the location of the drivers. Depending on the windows version this will look something like this:
 
-.. image:: images/installation/mpd_panel_installation_browse.png
+.. image:: /images/installation/mpd_panel_installation_browse.png
    :align: center
 
 where the path is the location of the unpacked driver files. You may have to do this twice, once for a 'USB to Serial
 converter' and once for a 'USB Serial Port'. You may be warnded that the driver is a security risk:
 
-.. image:: images/installation/mpd_panel_installation_driver_warning.png
+.. image:: /images/installation/mpd_panel_installation_driver_warning.png
    :align: center
 
 In case installation just fails without asking you to provide drivers, go to the device manager, find the new device not
 running properly, right click and select6 'Update Driver'. Then continue as above. Again you may have to do this
 twice. Eventually you should be successful:
 
-.. image:: images/installation/mpd_panel_installation_success.png
+.. image:: /images/installation/mpd_panel_installation_success.png
    :align: center
 
 Run MpdCtrl.exe 
@@ -58,7 +58,7 @@ Currently the MPD panel is controlled by a separate application, MpdCtrl.exe whi
 for different programs (we internally have some other applications that can share the panel with Imspector). You can
 start MpdCtrl.exe directly from the installation directory of Imspector or through the tools menu:
 
-.. image:: images/installation/tools_menu.png
+.. image:: /images/installation/tools_menu.png
    :align: center
 
 If the entry is greyed out this is either a glitch in Imspector (try to start it directly) or it is missing from
@@ -66,12 +66,12 @@ your installation. In this case make sure you did not accidentally delete it and
 
 When MpcCtrl starts it creates a tray icon which looks either like this:
 
-.. image:: images/installation/mpd_ctrl_not_connected.png
+.. image:: /images/installation/mpd_ctrl_not_connected.png
    :align: center
 
 if either the panel is not conneced or the driver is not correctly installed or like this:
 
-.. image:: images/installation/mpd_ctrl.png
+.. image:: /images/installation/mpd_ctrl.png
    :align: center
 
 if everything is just fine. You can start the app which does nothing except allowing you to rename a panel (if you
@@ -79,7 +79,7 @@ use more than one this is an important feature) and to show you which dials are 
 icon you can also tell MpdCtrl.exe to start up automatically when you log on.
 
 
-.. image:: images/installation/mpd_ctrl.png
+.. image:: /images/installation/mpd_ctrl.png
    :align: center
 
 
@@ -94,7 +94,7 @@ Configure the panel
 You configure the panel from the Imspector main menu. Go to :menuselection:`&Edit -> &Preferences -> Configure MPD Panel`.
 You will see the following dialog provided that MpcCtrl.exe is running and has recognized a panel.
 
-.. image:: images/installation/mpd_config.png
+.. image:: /images/installation/mpd_config.png
    :align: center
 
 You can load previous configurations by choosing them in the 'Slect configuration name' combo box. You can save the current

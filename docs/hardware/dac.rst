@@ -11,18 +11,18 @@ the main Imspector hardware control.
 
 Devices providing such generic channels usually have sub-pages to their hardware configuration pages:
 
-.. image:: ../images/hardware/hwrdlg_dacs.png
+.. image:: /images/hardware/hwrdlg_dacs.png
    :align: center
 
 and for the per-measurement settings a page that is added below the main configuration page of the device, usually
 titled 'DACs'.
 
-.. image:: ../images/hardware/docdlg_dacs.png
+.. image:: /images/hardware/docdlg_dacs.png
    :align: center
 
 Also, a Live Dialog is registered that allows adjustment and visual control of the scan range during the scan.
 
-.. image:: ../images/hardware/livedlg_dacs.png
+.. image:: /images/hardware/livedlg_dacs.png
    :align: center
 
 If you right-click on the dialog a menu appears with the commands
@@ -48,5 +48,5 @@ If you right-click on the dialog a menu appears with the commands
    
 Its behaviour can be adjusted through the settings dialog
 
-.. image:: ../images/hardware/livedlg_dacs_settings.png
+.. image:: /images/hardware/livedlg_dacs_settings.png
    :align: center

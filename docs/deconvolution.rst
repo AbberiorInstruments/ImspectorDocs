@@ -42,7 +42,7 @@ We demonstrate the creation of a data stack containing a single gaussian or lore
 The more general task to compute am arbitrary function with arguments being a data stack is discussed elsewhere but
 very closely related.
 
-.. figure:: images/deconvolution/psf1.jpg
+.. figure:: /images/deconvolution/psf1.jpg
    :align: center
 
    The image stack (upper middle) is a 2D stack with the offset set at minus half the stack length, as can be seen
@@ -50,7 +50,7 @@ very closely related.
    applying a function definition as explained in the text and clicking on :command:`Go` creates a new stack with identical
    dimensions and the image of a PSF.
 
-.. figure:: images/deconvolution/psf2.jpg
+.. figure:: /images/deconvolution/psf2.jpg
    :align: center
 
    The image stack (upper middle) is a 3D stack with the offset set as needed. Selecting this stack in the
@@ -92,7 +92,7 @@ shown in figures \ref{fig:deconv_psf1} and \ref{fig:deconv_psf1}.
 Convolution
 --------------------------
 
-.. figure:: images/deconvolution/convolution.jpg
+.. figure:: /images/deconvolution/convolution.jpg
    :align: center
 
    Demonstration of the convolution of two data stacks. The direction in the dialog should be set to convolve.
@@ -125,7 +125,7 @@ be added that dampens frequencies that were not transmitted very well and are do
 restorated therefore. The way to do it in the program is via the menu command:
 :command:`Analysis/Deconvolution/Linear` as shown in figure \ref{fig:deconv_lin}.
 
-.. figure:: images/deconvolution/linear.jpg
+.. figure:: /images/deconvolution/linear.jpg
    :align: center
 
    Demonstration of linear deconvolution of two data stacks of equal size. The direction in the dialog should be set to 
@@ -153,7 +153,7 @@ frequencies which are dominated by noise) we have the number of iterations to be
 The Imspector way of invoking this non-linear deconvolution method is via the :command:`Analysis/Deconvolution/Richardson-Lucy`
 menu command as illustrated in figure \ref{fig:deconv_rl}.
 
-.. figure:: images/deconvolution/rl.jpg
+.. figure:: /images/deconvolution/rl.jpg
    :align: center
 
    Demonstration of Richardson-Lucy deconvolution of two data stacks of equal size. First select the image and the PSF in

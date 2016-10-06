@@ -57,13 +57,13 @@ Clicking on the 'edit source' link will now use the default editor for 'rst' fil
 More than likely you have not set this application yet. In firefox you will therefore see the following
 dialog:
 
-.. image:: images/firefox_rsttype1.png
+.. image:: /images/firefox_rsttype1.png
    :align: center
 
 Click 'Browse ..' and browse to your documentation sources. You will not see 'edit.bat' as the dialog only shows '.exe' files
 but you can directly enter it into the filname edit box. Click ok and you are back in the dialog:
 
-.. image:: images/firefox_rsttype1.png
+.. image:: /images/firefox_rsttype1.png
    :align: center
 
 Make sure you check the 'Do this automatically ...' option and click 'OK'. If you do not want
@@ -73,7 +73,7 @@ point firefox to your custom version. If you want to use notepad, just select it
 The default 'edit.bat' also located in the 'doc' directory opens an additional tab in a gvim 
 instance already running giving you 'almost' and IDE:
 
-.. image:: images/gvim_indexrst.png
+.. image:: /images/gvim_indexrst.png
    :align: center
 
 
