@@ -117,6 +117,22 @@ sets a dictionary of name value pairs of all parameters),
 
 .. code-block:: python
 
+  imspector.state(path)
+
+where :code:`path` is of the form `device/.../state_name` returns the 
+corresponding Imspector state value (the empty path returns a dictionary of 
+name value pairs of all states),
+
+.. code-block:: python
+
+  imspector.set_state(path, value)
+
+where :code:`path` is of the form `device/.../state_name` and :code:`value` 
+is a value, sets the corresponding Imspector state value (the empty path 
+sets a dictionary of name value pairs of all states),
+
+.. code-block:: python
+
   imspector.measurement_names()
 
 returns the list of names of all open measurements in Imspector,
