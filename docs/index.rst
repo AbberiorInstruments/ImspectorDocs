@@ -16,6 +16,7 @@ Contents:
    quickstart
    tutorial
    installation
+   ui
    data
    deconvolution
    hardware
@@ -33,3 +34,6 @@ Contents:
 
 
 * :ref:`search`
+
+
+Compiled: |today|

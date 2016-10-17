@@ -6,4 +6,6 @@ Data Analysis Functions
 
    analysis/arithmetic
    analysis/examples
+   analysis/interpolation
+   analysis/smoothing
 

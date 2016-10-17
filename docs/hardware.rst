@@ -7,6 +7,8 @@ Driving Hardware with Imspector
 
    hardware/measurement
    hardware/config
+   hardware/templates
+   hardware/live_dialogs
    hardware/dac
    hardware/ttl
    hardware/generic

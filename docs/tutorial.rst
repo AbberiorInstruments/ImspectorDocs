@@ -46,11 +46,6 @@ Shortcuts
 * :kbd:`ctrl + Page Up / Down` Go up/down one layer along the fourth (hidden) axis.
   Also pressing the :kbd:`shift` key moves 10, pressing :kbd:`shift + alt` moves 100 layers along the hidden axis.
 
-Color maps
-----------
-
-.. todo:: Empty
-
 Graphs
 ------
 
@@ -78,7 +73,18 @@ The Stack Size Dialog
 
 This dialog allows you to change the physical size, offset and pixel dimensions of the stack as well as its data type.
 
-Exporting Data
+Export Data
 ----------------------------
 
-.. todo:: Empty
+Data from Imspector measurements can be exported into several file formats:
+
+- Colormap Tiff files/stacks (.tif/.tiff)
+- RGB Tiff files/stacks (.tif)
+- binary double files (.dbl)
+- Avi files/movies (.avi)
+- Visualization toolkit files (.vtk)
+- MRC files (.st, .map, .ccp4, .mrc)
+- ASCII data files (.dat, .asc)
+- Becker&Hickl data files (.sdt)
+
+To export data select the data Stack and select :menuselection:`File --> Export` or use the shortcut :kbd:`ctrl + e` to open the Export Data dialog.
