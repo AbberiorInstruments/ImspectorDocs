@@ -25,7 +25,7 @@ where <SpecInitialize.h> looks like this:
    
    #ifndef SPECDLL_VERSION
         // The SpecDll Version. This would change with branches. Possibly
-        // we have it conistent with the name.
+        // we have it consistent with the name.
         // The rule is: if this: if this changes, the API definitely breaks and the
         // plugin will not be loaded. 
    #	ifndef SPECDLL_REVISION
@@ -45,7 +45,7 @@ where SPECInit.h defines the functions
 
    #ifndef SPECDLL_VERSION
 	   // The SpecDll Version. This would change with branches. Possibly
-	   // we have it conistent with the name.
+	   // we have it consistent with the name.
 	   // The rule is: if this: if this changes, the API definitely breaks and the
 	   // plugin will not be loaded. 
    #	define SPECDLL_VERSION (0x0010 | (SPECDLL_REVISION << 16))
@@ -61,7 +61,7 @@ where SPECInit.h defines the functions
 				   LPCTSTR modname = __MODULE__,
 				   DWORD modrev  = MODULE_REVISION);
 	   
-	   //! One simple line for the lasy ones. Put this into InitInstance() of 
+	   //! One simple line for the lazy ones. Put this into InitInstance() of
 	   //! your dll's CWinApp object.
 	   #define SpecDll_Initialize() \
 		   if (! SpecDll_Init()) return FALSE;
@@ -81,7 +81,7 @@ including SpecLib was updated. This importantly includes all the helper librarie
 mark a change in the way the library behaves.
 The file SpecRevision.h is written by the WriteSpecRev.bat script which does NOT FAIL if there is no valid python installation
 accessible. In this case the file remains unchanged.
-The SPECDLL_VERSION should manually be updated any time the heasder files change, i.e. when the binary compatibility is
+The SPECDLL_VERSION should manually be updated any time the header files change, i.e. when the binary compatibility is
 sure to break. The above section is subject to change.
 
 A plugin simply calling SpecDll_Initialize() will thus tell the library at runtime against which revision of it it 
@@ -99,7 +99,7 @@ Instead of including <SpecInitialize.h> such a plugin should then
 Why so complicated? Well, the problem is that we may well change some of the cpp code in SpecDll and therefore the revision
 of SpecDll will change but no re-compile of the plugins is necessary. If the plugin would include <SpecRevision.h> or includes
 <SpecInitialize.h> it will then be re-compiled due to the change in <SpecRevision.h>. 
-This is inacceptable in a development cycle. "rev.h" on the other hand will change only when the pre-build step for
+This is unacceptable in a development cycle. "rev.h" on the other hand will change only when the pre-build step for
 the module is triggered, i.e. when the build system has in fact determined that the module needs updating. It will then ensure 
 that the correct value for SPECDLL_REVISION and MODULE_REVISION is put in. 
 Please not that MODULE_REVISION is NOT the last changed revision but the revision of the whole repository at compile 
@@ -115,12 +115,12 @@ Exception Handling and Crash Reporting
 
 At the moment all code is compiled in Microscoft C++ with the /EHsc option. That is, C++ exceptions are of course enabled
 but win32 exceptions are not handled by the catch(...) block and clean-up code is not compiled into any try-block that 
-cannto throw a C++ exception. Whether or not clean-up code is compiled into it and the stack is properly unwound may
+can throw a C++ exception. Whether or not clean-up code is compiled into it and the stack is properly unwound may
 depend on compiler optimization.
 There is an excellent article at http://www.thunderguy.com/semicolon/2002/08/15/visual-c-exception-handling/ about this.
 In short there are three solutions to the problem
 
-1. Compile with /EHs or /EHsc. Your win32 exceptions will end up in a __catch(translater) {} block if you have it. 
+1. Compile with /EHs or /EHsc. Your win32 exceptions will end up in a __catch(translator) {} block if you have it.
    the stack will not be unwound and from there you can do whatever you want. (Mostly you can pass the exception up
    or you can enter the handler. Continuing execution is not really an option for most exceptions.
 2. Compile with /EHa and make sure you have catch(...) handlers wherever needed to ensure proper stack unwinding
@@ -132,7 +132,7 @@ In short there are three solutions to the problem
 Currently we have option 3 for handling unexpected exceptions but not with the necessary /EHa compiler option 
 (at least not for all modules). The reason why this is OK IMHO is that we do not set the default
 translator but rather SetUnhandledExceptionFilter() which will be called only if there is not appropriate __catch() 
-statement. Therefore whenever the filter is called  a serious ocurred and we will live with the stack not
+statement. Therefore whenever the filter is called  a serious occurred and we will live with the stack not
 being properly unwound before we reach our error handling code. In fact this may even be good as we don't know whether
 the program is in some bad condition. 
 In 
@@ -141,7 +141,7 @@ addition there is a problem as MFC includes some exception handling in the windo
 On 64bit systems running a 32bit application the process will usually 
 swallow exceptions behind a window callback.
 This is a windows bug which may stay in place because it has been there
-for a long time. See `Microsoft KB 976038`__ and `this formum post`__ for details.
+for a long time. See `Microsoft KB 976038`__ and `this forum post`__ for details.
 
 __ http://support.microsoft.com/kb/976038
 __ http://connect.microsoft.com/VisualStudio/feedback/details/550944/hardware-exceptions-on-x64-machines-are-silently-caught-in-wndproc-messages
@@ -149,7 +149,7 @@ __ http://connect.microsoft.com/VisualStudio/feedback/details/550944/hardware-ex
 Calling this function will enable the hotfix and cause an 
 an application error dialog to appear instead. Importantly the exception
 is still not propagated upwards, i.e. there is no stack unwinding to a possible
-exeption handler before the callback. I have still to test whether this is true for all exceptions and 
+exception handler before the callback. I have still to test whether this is true for all exceptions and
 whether it depends on the exception model we compile with. The behaviour of the hotfix
 is to enter an exception handler that ultimately crashes the program.
 
@@ -181,7 +181,7 @@ in the comment below.
    the pointer it uses by the installed windows procedure.
 
 .. note::
-   One should also look at context switching. Exceptions occuring behind a context switch will be 
+   One should also look at context switching. Exceptions occurring behind a context switch will be
    caught and rethrown, obscuring their
    origin. In order to avoid this, call AfxSetAmbientActCtx(FALSE);
    in every InitInstance() function.

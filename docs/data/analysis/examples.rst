@@ -42,7 +42,7 @@ This recipe is for a vertical rotation axis at :math:`x=a` (a is number of pixel
 Calculate a 2D Gaussian peak at the center
 ..........................................
 
-Parser expresion: ``sigma=5e-7,exp(-((x-(x0+X/2))^2+(y-(y0+Y/2))^2)/(2*sigma^2))``
+Parser expression: ``sigma=5e-7,exp(-((x-(x0+X/2))^2+(y-(y0+Y/2))^2)/(2*sigma^2))``
 
 Can be used to calculate a 2D Gaussian peak at the center of the current data stack.
 

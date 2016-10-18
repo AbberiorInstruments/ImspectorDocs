@@ -8,7 +8,7 @@ Display toolbar
 The 'Display' toolbar (Fig. 1) allows to change the way the data is displayed in a very fast way.
 The first three buttons allow to rotate a 3D data stack from XY to XZ to YZ.
 The fourth button allows to exchange the displayed X and Y axis and thereby to tilt the data axes.
-The fifth button changes the data representation from overlayed to side by side.
+The fifth button changes the data representation from overlaid to side by side.
 The sixth button is to show the different data channels in RGB colors. The first channel will be shown in red, the second in green, and the third in blue. All other channels will not be changed.
 The seventh button shows/hides the information and comment pane on top of the measurement view.
 The eighth button shows information on the data stack dimensions.

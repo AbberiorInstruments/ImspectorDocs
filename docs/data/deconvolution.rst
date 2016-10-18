@@ -14,7 +14,7 @@ some general remarks:
 
 * While the resolution of your image cannot be improved by deconvolution in a strict sense (i.e. information cannot be
   added if it is not already there), the deconvolved image is often less affected by imaging noise as a side effect.
-  The obtained representation is often interpreted as the best estimate for the unkown object which was to be
+  The obtained representation is often interpreted as the best estimate for the unknown object which was to be
   measured. The goal of deconvolution is to find this best estimate.
 
 * However, especially for very dark images with a low number of collected counts (photons, ...) the usual

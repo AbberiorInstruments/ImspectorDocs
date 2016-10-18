@@ -18,7 +18,7 @@ If Imspector never starts and instead you you see the following dialog
    :width: 14 cm
    :align: center
 
-most probably you are missing the visual stuidio 2008 runtime. The problem is easy to fix, just download the
+most probably you are missing the Visual Studio 2008 runtime. The problem is easy to fix, just download the
 redistributable package from Microsoft here:
 
 `Microsoft Visual C++ 2008 SP1 Redistributable Package (x86) <http://www.microsoft.com/downloads/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&displaylang=en>`_
@@ -28,11 +28,11 @@ and install it on your computer. Imspector should now start.
 Registering Hardware Ports takes too long.
 *******************************************
 
-During startup, Imspector will take a long time before displaying 'Registring devices' or, in version since *v0.10rev4881*,
+During startup, Imspector will take a long time before displaying 'Registering devices' or, in version since *v0.10rev4881*,
 display a message **Registering hardware ports ... [Press and hold SHIFT + ESC to cancel]** in the splash screen.
 The most probable cause of this is that you have some USB to serial or parallel port bridges installed that announce
 ports but produce errors when accessing them. The reason for the delay are long timeouts. In older Imspector
-versions you have to wait and, to speed up future startups try some of the solutions below.
+versions you have to wait and, to speed up future starts try some of the solutions below.
 In newer Imspector versions the problem is eliminated for serial ports, where initialization does no longer test-open the port.
 Thus all ports present in the Device Manager (seen by the OS) will be added to the list but if you have a bad
 bridge, opening them will fail when initializing a com device using them. While the problem has never been reported for
@@ -79,6 +79,6 @@ Yes it is. Create several 'Configurations' (also called 'Property Sets') in your
 the STOP button, i.e. the one with the square on it). You can see available configurations in the 'Configurations'
 live dialog and change between them by clicking on the entries. You can then edit the settings independently for each of them.
 Usually this is a way to combine e.g. an overview scan and the measurement in the same template but there is an option
-:menuselection:`&Mesurement --> Loop Through Property Sets` that does exactly what you want. It will run a
+:menuselection:`&Measurement --> Loop Through Property Sets` that does exactly what you want. It will run a
 measurement for each 'Property Set' in the order they are defined.
 More sophisticated control will only be available when Imspector finally has python embedded as a scripting language.

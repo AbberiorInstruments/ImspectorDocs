@@ -50,13 +50,13 @@ Shortcuts
 |                       | Left mouse button drag  |                                                                                                             |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
 | Stack view -          | <Ctrl> + T              | Shows information about the stack size                                                                      |
-| Size & Informations   |                         | (physical dimensions, pixel number, Offsets of the active document).                                        |
+| Size & Information    |                         | (physical dimensions, pixel number, Offsets of the active document).                                        |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
 | File                  | <Ctrl> + N              | Create new measurement.                                                                                     |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
 | File                  | <Ctrl> + M              | Edit comment.                                                                                               |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
-| File                  | <Ctrl> + O              | Open measurments...                                                                                         |
+| File                  | <Ctrl> + O              | Open measurements...                                                                                        |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
 | File                  | <Ctrl> + W              | Close measurements...                                                                                       |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
@@ -108,7 +108,7 @@ Shortcuts
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
 | Stack view - Colormap | F10                     | Adapt the lower colormap limit to the current image or selection.                                           |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
-| Stack view - Colormap | <Alt> + <Shift> + E     | Equalize colomap between different measurements in the stack view.                                          |
+| Stack view - Colormap | <Alt> + <Shift> + E     | Equalize colormap between different measurements in the stack view.                                         |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
 | Stack view - Colormap | <Shift> + F9            | Adapt the lower colormap limit to the current image or selection; do it for all measurements.               |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
@@ -117,7 +117,7 @@ Shortcuts
 | Stack view - Gallery  | <Ctrl> + 1 - <Ctrl> + 9 | Gallery layout (number of stacks in a row).                                                                 |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
 | Stack view - Gallery  | <Ctrl> + G              | Gallery mode / overlay images.                                                                              |
-|                       |                         | All windows of the selected measurement window are overlayed vs. displayed next to each other.              |
+|                       |                         | All windows of the selected measurement window are overlaid vs. displayed next to each other.               |
 +-----------------------+-------------------------+-------------------------------------------------------------------------------------------------------------+
 | Stack view -          | <Ctrl> + H              | Hidden axis / projections.                                                                                  |
 | Projections           |                         |                                                                                                             |

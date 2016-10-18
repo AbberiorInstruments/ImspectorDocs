@@ -108,7 +108,7 @@ structure:
       omas_UINT32 rank;
       //! The number of pixels along the axes
       omas_UINT32 res[OMAS_MAX_DIMENSIONS];
-      //! The phyisical length of the stack axes
+      //! The physical length of the stack axes
       double len[OMAS_MAX_DIMENSIONS];
       //! The physical offset of the stack
       double off[OMAS_MAX_DIMENSIONS];
@@ -205,9 +205,9 @@ compression_level
    The compression level used. This is whatever the library allows. For ZIP  compression
    the levels are 0 to 9 from fastest to strongest.
 name_len
-   The length in tytes of the UTF-8 encoded stack name following this header immediately.
+   The length in bytes of the UTF-8 encoded stack name following this header immediately.
 descr_len
-   The length in tytes of the UTF-8 encoded stack description following the name. 
+   The length in bytes of the UTF-8 encoded stack description following the name.
 reserved
    Out of use.
 next_stack_pos
@@ -313,7 +313,7 @@ metadata_length
    format.
    While you can use this field for your own meta-data this is not encouraged. The field
    is intended to be filled in a standard way that OBF readers may or may not read. Custom
-   meta-data should be saved in the file and stack description fields, preferrably also
+   meta-data should be saved in the file and stack description fields, preferably also
    in UTF-8 xml(see below).
    Nevertheless, readers should not throw or report a fatal error when they do not 
    understand the data contained in this field - they should issue a warning. 
@@ -427,7 +427,7 @@ the task at hand.
 For meta information that is to be shared by several applications it is however strongly 
 encouraged that meta-information is saved as UTF-8 text in the file or stack 
 description, preferably formatted as xml in a way compatible to the output of the 
-:cppcode:`omas_export_xml()` function in the *OmasIo* library, described in a seperate 
+:cppcode:`omas_export_xml()` function in the *OmasIo* library, described in a separate
 section. In C++, the easiest way to do this is to write the meta information into an 
 :cppcode:`OProp` object and actually use the :cppcode:`omas_export_xml()` function 
 to convert it to an xml string. For Matlab and Python, toolboxes are provided that
@@ -445,7 +445,7 @@ therefore will always contain strings of equal length (with shorter strings simp
 by NULL bytes). The toolbox will convert these to cell arrays of strings tagged with
 a special flag. On the C++ side they will look like cell arrays of strings but as long
 as the tag is untouched they will be converted back to string arrays on the Matlab side.
-Please note that usually it is preferrable to use cell arrays of strings on the Matlab
+Please note that usually it is preferable to use cell arrays of strings on the Matlab
 side to start with. Also, :cppcode:`OProp` knows empty 'cells' (an :cppcode:`OProp` with 
 no content) which is mapped to an empty 'double' array in Matlab.
 There are similar mapping issues with other bindings like Python. The general Ansatz is

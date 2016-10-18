@@ -42,7 +42,7 @@ by copying/moving it and directing Imspector to the new location through
 :menuselection:`&Edit --> &Preferences --> &Configuration Directory`.
 
 There are other useful options in this menu, too. 
-To avoid an error message upon startup, explicitely disable logging for now.
+To avoid an error message upon startup, explicitly disable logging for now.
 
 .. warning:: 
    You should regularly back up your configuration directory as settings, custom colormaps etc.

@@ -21,7 +21,7 @@ Specifics of some Frequently Used Drivers
    cameras/andorixon
    cameras/sensicam
 
-Decrepated non-standard Camera Drivers
+Deprecated non-standard Camera Drivers
 *****************************************
 
 

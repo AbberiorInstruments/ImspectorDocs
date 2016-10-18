@@ -119,6 +119,6 @@ button which is checked means the level of the TTL channel is high.
    :align: center
 
 During a measurement, pressing buttons alters their state (they are disabled if the TTL channel runs a sequence). This state change will also 
-modify the action setting (if it was *Kepp high/low*). In this case the TTL channel will return to its pre-measurement state after the measurement 
+modify the action setting (if it was *Keep high/low*). In this case the TTL channel will return to its pre-measurement state after the measurement
 finishes regardless of whether the state was changed during the measurement. See also **Final Position** above.
 

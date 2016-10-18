@@ -41,7 +41,7 @@ windows to the location of the drivers. Depending on the windows version this wi
    :align: center
 
 where the path is the location of the unpacked driver files. You may have to do this twice, once for a 'USB to Serial
-converter' and once for a 'USB Serial Port'. You may be warnded that the driver is a security risk:
+converter' and once for a 'USB Serial Port'. You may be warned that the driver is a security risk:
 
 .. image:: /images/installation/mpd_panel_installation_driver_warning.png
    :width: 10 cm
@@ -75,7 +75,7 @@ When MpcCtrl starts it creates a tray icon which looks either like this:
    :width: 10 cm
    :align: center
 
-if either the panel is not conneced or the driver is not correctly installed or like this:
+if either the panel is not connected or the driver is not correctly installed or like this:
 
 .. image:: /images/installation/mpd_ctrl.png
    :width: 10 cm
@@ -105,7 +105,7 @@ You will see the following dialog provided that MpcCtrl.exe is running and has r
    :width: 10 cm
    :align: center
 
-You can load previous configurations by choosing them in the 'Slect configuration name' combo box. You can save the current
+You can load previous configurations by choosing them in the 'Select configuration name' combo box. You can save the current
 configuration by typing a (new) name in the combo box (or choosing an old one to overwrite) and pressing 'Save'.
 Delete configurations by selecting them and pressing 'Delete'. To modify configurations you edit the dial entries for
 all connected panels. The values to configure are:
