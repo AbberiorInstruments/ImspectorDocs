@@ -15,6 +15,7 @@ To open a Template select 'File' → 'New' → 'File from Template'...
 During installation of the system a set of standard measurements schemes is pre-defined (Fig. 1).
 
 .. figure:: /images/hardware/load_template_dialog.png
+   :width: 10 cm
    :align: center
 
    'Load Template' dialog.
@@ -31,4 +32,5 @@ In Imspector existing measurements can be used as templates, because they contai
 for starting a new measurement. After opening a saved measurement, all experiments can be done in the exact same way by
 restarting the saved measurement with 'REC'.
 
-Note: When several measurements are imported into Imspector, the scan settings of the active measurement window will be applied, when the 'REC' button is pressed. This allows a rapid change between different measurement modes.
+Note: When several measurements are imported into Imspector, the scan settings of the active measurement window will be
+applied, when the 'REC' button is pressed. This allows a rapid change between different measurement modes.

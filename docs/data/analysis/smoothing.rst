@@ -12,6 +12,7 @@ Then the type of smoothing has to be selected on the right side. Imspector offer
 - Lowpass cutoff
 
 .. figure:: /images/data/analysis/smooth_dialog.png
+   :width: 9 cm
    :align: center
 
    'Smooth Stack' dialog.

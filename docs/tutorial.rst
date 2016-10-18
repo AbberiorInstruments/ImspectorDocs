@@ -25,10 +25,10 @@ Loading Data
 .. todo:: Empty
 
 Displaying Data
-----------------------------
+---------------
 
 Magnifying Glass
-******************
+****************
 
 If you hold down the :kbd:`shift` key and drag with the left mouse button in a window a magnifying glass is
 displayed. :kbd:`shift + alt` keys display an even bigger magnifying glass.
@@ -68,13 +68,20 @@ when they are in use), NOT the rectangle selection. For 4d stacks the following 
 
 In add-up and maximum intensity projection mode all layers (along the hidden axis) are copied. In parse-through mode only the current layer is copied.
 
-The Stack Size Dialog
+The Change Stack Size Dialog
 ----------------------------
 
 This dialog allows you to change the physical size, offset and pixel dimensions of the stack as well as its data type.
+It can be accessed using the button at the side of the image or via the shortcut :kbd:`ctrl + t`.
+
+.. figure:: /images/ui/change_stack_size_dialog.png
+   :width: 10 cm
+   :align: center
+
+   Change Stack Size dialog.
 
 Export Data
-----------------------------
+-----------
 
 Data from Imspector measurements can be exported into several file formats:
 

@@ -43,6 +43,7 @@ The more general task to compute am arbitrary function with arguments being a da
 very closely related.
 
 .. figure:: /images/deconvolution/psf1.jpg
+   :width: 10 cm
    :align: center
 
    The image stack (upper middle) is a 2D stack with the offset set at minus half the stack length, as can be seen
@@ -51,6 +52,7 @@ very closely related.
    dimensions and the image of a PSF.
 
 .. figure:: /images/deconvolution/psf2.jpg
+   :width: 10 cm
    :align: center
 
    The image stack (upper middle) is a 3D stack with the offset set as needed. Selecting this stack in the
@@ -93,6 +95,7 @@ Convolution
 --------------------------
 
 .. figure:: /images/deconvolution/convolution.jpg
+   :width: 10 cm
    :align: center
 
    Demonstration of the convolution of two data stacks. The direction in the dialog should be set to convolve.
@@ -126,6 +129,7 @@ restorated therefore. The way to do it in the program is via the menu command:
 :command:`Analysis/Deconvolution/Linear` as shown in figure \ref{fig:deconv_lin}.
 
 .. figure:: /images/deconvolution/linear.jpg
+   :width: 10 cm
    :align: center
 
    Demonstration of linear deconvolution of two data stacks of equal size. The direction in the dialog should be set to 
@@ -171,7 +175,7 @@ the resulting image after a fixed number of iterations each and choose from the 
 will show too much blur, in the end, even the noise in the image will be translated to a crumbling structure, 
 clearly representing artifacts. [#]_
 
-.. [#] So the origin of the internal coordinate syste is at the center of the stack. 
+.. [#] So the origin of the internal coordinate system is at the center of the stack.
 .. [#] Will be microns or nm in most cases. Given is the edge length of the field of view. A unit is not given, however all parameters later on have to have the same units, whatever they are.
 .. [#] The normalization in this case is so that the maximum of the stack 1 (in the center). Although sometimes 
    deconvolution algorithms expect a integral over the PSF of one (to resemble a probability distribution) this

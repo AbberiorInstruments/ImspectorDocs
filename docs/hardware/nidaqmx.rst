@@ -10,10 +10,12 @@ out (AO), analog in (AI), TTL (TO) and counter (CI) channels. Create a new devic
 the Measurement&Automation explorer into the configuration dialog.
 
 .. image:: /images/hardware/nidaqmx_main.png
+   :width: 10 cm
    :align: center
 
 Initialize the device by pressing the 'Init' button. Then restart Imspector and return to the configuration dialog.
 It should now include additional device information.
 
 .. image:: /images/hardware/nidaqmx_main_ready.png
+   :width: 10 cm
    :align: center

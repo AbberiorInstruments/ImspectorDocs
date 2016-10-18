@@ -6,6 +6,6 @@ Handling Data with Imspector
    :maxdepth: 2
 
    data/importing
-   data/exporting
    data/inspection
    data/analysis
+   data/deconvolution

@@ -14,6 +14,7 @@ The seventh button shows/hides the information and comment pane on top of the me
 The eighth button shows information on the data stack dimensions.
 
 .. figure:: /images/ui/toolbar_display.png
+   :width: 8 cm
    :align: center
 
    The 'Display' toolbar.
@@ -33,6 +34,7 @@ The eighth button of the file toolbar copies the selected data to the clipboard.
 The ninth button of the file toolbar pastes the selected data window to the measurement or graph window.
 
 .. figure:: /images/ui/toolbar_files.png
+   :width: 9 cm
    :align: center
 
    The 'Files' toolbar.
@@ -48,6 +50,7 @@ Note, if the 'overwrite warning' is activated Imspector will ask if the current 
 ! An already existing file may be overwritten !
 
 .. figure:: /images/ui/toolbar_measurement.png
+   :width: 4.5 cm
    :align: center
 
    The 'Measurement' toolbar.
@@ -62,6 +65,7 @@ The sixth button of the 'Zoom' toolbar shrinks the measurement window to the siz
 The seventh button of the 'Zoom' toolbar locks the dimensions of shown data.
 
 .. figure:: /images/ui/toolbar_zoom.png
+   :width: 7 cm
    :align: center
 
    The 'Zoom' toolbar.

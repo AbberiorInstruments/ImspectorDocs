@@ -33,6 +33,7 @@ Start
   Server (with requires Administrator permissions the first time):
 
 .. image:: /images/specpy/imspector_run_server.png
+   :width: 8 cm
    :align: center
 
 - To load the Python Interface just say

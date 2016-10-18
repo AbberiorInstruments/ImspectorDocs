@@ -11,6 +11,7 @@ Many time correlated single photon counting cards from Becker&Hickl are supporte
 In the hardware configuration dialog the settings that concern all measurements are chosen:
 
 .. image:: /images/hardware/spcm_hwr.png
+   :width: 10 cm
    :align: center
 
 Set the module number and initialize the device by pressing the 'Init' button. Check whether the Type displayed is correct. 
@@ -23,6 +24,7 @@ The settings for each measurement offer different possibilities than the
 B&H software. Most of them are self explanatory and this documentation may grow when time is at hand.
 
 .. image:: /images/hardware/spcm_doc.png
+   :width: 10 cm
    :align: center
 
 Multi-channel measurements
@@ -69,6 +71,7 @@ The card can stream FIFO data to the disk during the measurement. Imspector then
 This FIFO imaging mode is not fully functional. If an axis is synced it will ignore it and display all events added for this axis.
 
 .. image:: /images/hardware/spcm_fifo.png
+   :width: 10 cm
    :align: center
 
 Live Dialogs
@@ -77,6 +80,7 @@ Live Dialogs
 Some settings can be altered while the measurement is running through the Live dialog.
 
 .. image:: /images/hardware/spcm_live.png
+   :width: 6 cm
    :align: center
 
 Rate monitor
@@ -85,4 +89,5 @@ Rate monitor
 Updated every second this displays current rates in Hz
 
 .. image:: /images/hardware/spcm_rates.png
+   :width: 6 cm
    :align: center

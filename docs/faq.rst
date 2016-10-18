@@ -15,8 +15,8 @@ Imspector does not start because the 'application configuration' is incorrect.
 If Imspector never starts and instead you you see the following dialog
 
 .. image:: /images/faq/runtime_error.png
+   :width: 14 cm
    :align: center
-
 
 most probably you are missing the visual stuidio 2008 runtime. The problem is easy to fix, just download the
 redistributable package from Microsoft here:
@@ -51,6 +51,7 @@ Identify the device and go to the details tab. Select the **Hardware Ids** prope
 string or the ids behind **VID** and **PID** (for example 067B and 2303). Often this points you in the right direction.
 
 .. image:: /images/faq/vidpid_devmanager.png
+   :width: 12 cm
    :align: center
 
 Hardware Initialization
@@ -65,6 +66,7 @@ open port properties and click on the "Advanced Settings" button. There you may 
 will need to disconnect and re-connect the device afterwards to re-initialize the driver.
 
 .. image:: /images/faq/comport_devmanager.png
+   :width: 12 cm
    :align: center
 
 Measurement Configuration

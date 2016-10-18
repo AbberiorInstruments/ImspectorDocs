@@ -4,23 +4,13 @@
 Quickstart
 =================
 
-.. todo:: Is Imspector still available for download?
-
-You can download Imspector by going to
-http://www.imspector.de/downloads
-and logging in. If you have no credentials, fill out the contact form found at http://www.imspector.de, indicate
-your intended use of the program and wait for confirmation.
-
-Your download contains the program itself along with a few data analysis plugins and drivers for
+Imspector contains a few data analysis plugins and drivers for
 
 - VidCap (for most webcams) 
 - SimCam (a simulated camera for testing) 
 - SyncDriver (provides dummy axes, allows synchronization via serial port)
 - ComDriver (a generic driver for com/gpib devices with a simple protocol)
 - Timer (for time-lapse type measurements)
-
-and, if you have licensed Imspector and some drivers possibly for
-
 - Becker&Hickl SPCM cards
 - National instruments DAQ cards (through the NiDAQmx drivers) which control scanners, shutters and read out detectors
 - Scanners from PI
@@ -41,14 +31,13 @@ you use Imspector, create one and select it. Otherwise point Imspector to your
 existing directory.
 
 .. note::
-
-   Depending on your OS configuration you may have to install some additional libraries. 
+   Depending on your OS configuration you may have to install some additional libraries.
    Please see the `program start chapter in the FAQ <https://imspector.mpibpc.mpg.de/documentation/faq.html#errors-during-startup>`_ if you encounter errors during startup.
 
 The configuration directory can be chosen independently for each user on each computer Imspector is run.
 The directory itself can contain computer-specific configurations and also contains custom color maps,
 fit functions, formulas created by the user. Therefore it is reasonable to use one directory per user
-which is accessible from (or syhncrhonized between) computers. You can change its location at any time
+which is accessible from (or synchronized between) computers. You can change its location at any time
 by copying/moving it and directing Imspector to the new location through
 :menuselection:`&Edit --> &Preferences --> &Configuration Directory`.
 
@@ -72,8 +61,7 @@ Choose one that is recognized by you and other potential users and keep in
 mind you may want to add more than one 'Camera' or 'Scanner'. 
  
 .. note:: 
-
-   Imspector can be extended by custom drivers compiled against the SDK. 
+   Imspector can be extended by custom drivers compiled against the SDK.
    This requires knowledge of C++, the MFC and an installation of the 
    Visual Studio 2008 (currently) 
 
@@ -149,7 +137,7 @@ All analysis functions are accessible through context menus. Right click
 on a stack, graph, axis, color map for those. For most of the frequently
 used functions there are toolbar buttons.
  
-Please write us a mail with as much detail of what you intended to do and what
+Please write an email with as much detail of what you intended to do and what
 you already tried if there is trouble.
  
  

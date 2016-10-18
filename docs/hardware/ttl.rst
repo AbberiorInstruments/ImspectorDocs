@@ -8,6 +8,7 @@ switching sequences etc.
 Devices providing such generic channels usually have sub-pages to their measurement configuration pages:
 
 .. image:: /images/hardware/docdlg_ttl.png
+   :width: 10 cm
    :align: center
 
 Wait times
@@ -114,6 +115,7 @@ Most TTL channel instances will also register a Live Dialog that allows adjustme
 button which is checked means the level of the TTL channel is high.
 
 .. image:: /images/hardware/livedlg_ttl.png
+   :width: 6 cm
    :align: center
 
 During a measurement, pressing buttons alters their state (they are disabled if the TTL channel runs a sequence). This state change will also 

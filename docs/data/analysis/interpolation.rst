@@ -9,6 +9,7 @@ The results of the interpolation directly show the differences of the algorithms
 rather smooth images where the 'Resample' algorithm preserves the data.
 
 .. figure:: /images/data/analysis/interpolation_dialog.png
+   :width: 9 cm
    :align: center
 
    'Interpolation' dialog.

@@ -18,7 +18,6 @@ Contents:
    installation
    ui
    data
-   deconvolution
    hardware
    specpy
    specmx

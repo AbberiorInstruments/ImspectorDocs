@@ -7,6 +7,7 @@ The active colormap is displayed at the bottom of the measurement window. On the
 the minimum and maximum gray value is given. In a stack view the colormap is adjusted to the maximum/minimum of the current selection.
 
 .. figure:: /images/ui/colormap_fire.jpg
+   :width: 12 cm
    :align: center
 
    'Fire' colormap.
@@ -20,6 +21,7 @@ Enter colormap right-click context menu. To change the colormap choose the first
 select the colormap of choice.
 
 .. figure:: /images/ui/colormaps.jpg
+   :width: 14 cm
    :align: center
 
    Built-in colormaps.
@@ -60,6 +62,7 @@ editor has to be opened. To this end, the colormap context has to be opened by r
 Then select 'New'.
 
 .. figure:: /images/ui/colormap_custom_dialog.png
+   :width: 8 cm
    :align: center
 
    'Colormap editor' dialog.

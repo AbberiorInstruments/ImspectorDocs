@@ -5,6 +5,7 @@ The Analysis/Arithmetics plugin is used to create new data stacks from already e
 between the old and the new data is specified by a function.
 
 .. figure:: /images/data/analysis/arithmetics_dialog.png
+   :width: 10 cm
    :align: center
 
    Arithmetic operations dialog.
