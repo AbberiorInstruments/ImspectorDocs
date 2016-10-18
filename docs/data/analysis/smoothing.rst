@@ -1,7 +1,7 @@
 Smoothing
 ---------
 
-In Imspector images can be smoothed using the 'Smooth stack' dialog (Fig. 1).
+In Imspector images can be smoothed using the 'Smooth stack' dialog (:ref:`fig_data_smoothing`).
 To smooth an image, the stack that should be smoothed is selected on the left side of the dialog.
 Then the type of smoothing has to be selected on the right side. Imspector offers different methods to smooth images:
 
@@ -11,6 +11,7 @@ Then the type of smoothing has to be selected on the right side. Imspector offer
 - Lowpass gauss
 - Lowpass cutoff
 
+.. _fig_data_smoothing:
 .. figure:: /images/data/analysis/smooth_dialog.png
    :width: 9 cm
    :align: center

@@ -1,9 +1,11 @@
 The Arithmetics Plugin
 *************************
 
-The Analysis/Arithmetics plugin is used to create new data stacks from already existing data stacks and the relation
-between the old and the new data is specified by a function.
+Imspector offers image arithmetic functionality. The Analysis/Arithmetics plugin is used to create new data stacks from
+already existing data stacks and the relation between the old and the new data is specified by a function. To access this,
+please open the 'Arithmetic Operations' dialog (:menuselection:`Analysis --> Arithmetic Operations`, :ref:`fig_data_arithmetics`).
 
+.. _fig_data_arithmetics:
 .. figure:: /images/data/analysis/arithmetics_dialog.png
    :width: 10 cm
    :align: center
@@ -53,7 +55,7 @@ In the following the different element types are listed.
 ================= =========================================================================================================================
 Built-in variable Description
 ================= =========================================================================================================================
-``r``             Value of each pixel in the input stack.
+``r``             Value of each pixel in the input stack (selected stack).
 ``R``             Value of each pixel in the second input stack (if given).
 ``s,u,v,w``       Pixel position (starting at zero) of the actual position in the input stack(s) in 1st, 2nd, 3rd, 4th dimension.
 ``x,y,z,t``       Physical position of the actual position in the input stack in 1st, 2nd, 3rd, 4th dimension.
@@ -93,6 +95,21 @@ Built-in functions Description
 ``floor,ceil``     Closest integer values rounded towards -Infinity/Infinity
 ``exp,ln``         Exponential, natural logarithm
 ================== =========================================================================================================================
+
+Example of simple parser expressions
+++++++++++++++++++++++++++++++++++++
+
+``sqrt(r)``
+
+Takes the square root of the count values in the individual pixels
+
+``r^2``
+
+Squares the count values in the individual pixels.
+
+``r-R``
+
+Subtracts the intensity value of the second selected image/stack from those in the first selected image/stack.
 
 Example of an advanced parser expression
 ++++++++++++++++++++++++++++++++++++++++

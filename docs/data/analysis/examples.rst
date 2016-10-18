@@ -1,6 +1,31 @@
 Examples for Arithmetics Plugin
 **********************************
 
+Thresholding an Image (one sided thresholding)
+...............................................
+
+First select the image to threshold at 'Stacks' using the pipette. Then set parameters to function. Then insert the formula: ``r>15?r:0``.  Finally Press 'Go …'
+The formula contains following function: If a gray value is larger than 15 counts, leave it like it is. Otherwise set it to 0.
+
+Thresholding an Image (two sided thresholding)
+...............................................
+
+First select the image to threshold at 'Stacks' using the pipette. Then set parameters to function. Then insert the formula: ``r>=15&r<20?r:0``.  Finally Press 'Go …'
+The formula contains following function: If a gray value is larger than or equal to 15 counts and smaller than 20 counts, leave it like it is. Otherwise set it to 0.
+
+Creation of an Image with Poisson noise (no structure)
+............................................................
+
+Insert the formula: ``poidev(n)``, where you substitute ``n`` with the desired average intensity value within the resulting image stack.
+
+Creation of an Image with Poisson noise on an existing structure
+...................................................................
+
+First select the image to threshold at 'Stacks' using the pipette. Then set parameters to function. Insert the formula:
+``poidev(r)`` which uses ``r``, the current intensity value of each pixel of the selected image stack.
+
+
+
 Scale stack content about a factor a without changing the stack size
 .......................................................................
 

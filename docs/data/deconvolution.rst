@@ -158,6 +158,7 @@ The Imspector way of invoking this non-linear deconvolution method is via the :c
 menu command as illustrated in figure \ref{fig:deconv_rl}.
 
 .. figure:: /images/deconvolution/rl.jpg
+   :width: 10 cm
    :align: center
 
    Demonstration of Richardson-Lucy deconvolution of two data stacks of equal size. First select the image and the PSF in

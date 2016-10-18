@@ -10,10 +10,11 @@ They contain the acquisition parameters (as field of view, pixel size, scan spee
 activated lasers, activated detectors....) that are required for a type of measurement. As in an Imspector measurement,
 multiple windows may be included.
 
-To open a Template select 'File' → 'New' → 'File from Template'...
+To open a Template select :menuselection:`File --> New --> File from Template`...
 
-During installation of the system a set of standard measurements schemes is pre-defined (Fig. 1).
+During installation of the system a set of standard measurements schemes is pre-defined (:ref:`fig_hardware_templates`).
 
+.. _fig_hardware_templates:
 .. figure:: /images/hardware/load_template_dialog.png
    :width: 10 cm
    :align: center
@@ -32,5 +33,6 @@ In Imspector existing measurements can be used as templates, because they contai
 for starting a new measurement. After opening a saved measurement, all experiments can be done in the exact same way by
 restarting the saved measurement with 'REC'.
 
-Note: When several measurements are imported into Imspector, the scan settings of the active measurement window will be
-applied, when the 'REC' button is pressed. This allows a rapid change between different measurement modes.
+.. note::
+   When several measurements are imported into Imspector, the scan settings of the active measurement window will be
+   applied, when the 'REC' button is pressed. This allows a rapid change between different measurement modes.
