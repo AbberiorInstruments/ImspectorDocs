@@ -4,7 +4,6 @@
 TCSPC hardware
 ##############
 
-
 Introduction
 ------------
 
