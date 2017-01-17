@@ -1,13 +1,15 @@
 .. _Spcm:
 
-#######################################
-Becker&Hickl SPCM Cards
-#######################################
+#################################################
+Becker&Hickl SPCM Cards (without AI FPGA scanner)
+#################################################
 
 Configuring the Card
 ---------------------
 
-Many time correlated single photon counting cards from Becker&Hickl are supported or support can be added on request.
+When scanning with "old style" SpecScan based drivers like NiDAQmx2 driver, time correlated single photon counting 
+cards from Becker&Hickl are supported. When using the the FPGA card ("Experimental Control"), i.e. in all AI microscopes
+the new TCSPC interface should be used as described in another section.
 In the hardware configuration dialog the settings that concern all measurements are chosen:
 
 .. image:: /images/hardware/spcm_hwr.png

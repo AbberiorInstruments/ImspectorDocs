@@ -14,6 +14,7 @@ Driving Hardware with Imspector
    hardware/generic
    hardware/cameras
    hardware/nidaqmx
+   hardware/tcspcm
    hardware/spcm
    
 
