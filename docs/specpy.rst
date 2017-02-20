@@ -30,10 +30,10 @@ Start
 --------------------
 
 - Working from an external Python console you need to start the Imspector 
-  Server (with requires Administrator permissions the first time):
+  Server (which requires Administrator priviliges the first time):
 
 .. image:: /images/specpy/imspector_run_server.png
-   :width: 8 cm
+   :width: 13 cm
    :align: center
 
 - To load the Python Interface just say
