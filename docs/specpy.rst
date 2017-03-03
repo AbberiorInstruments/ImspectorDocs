@@ -6,8 +6,9 @@ Imspector Python Interface
 
 .. role:: python(code)
 
-Imspector comes with a Python Interface named SpecPy which can be used either from the embedded Python console or
-from an external Python console running on the same computer (to enable sharing of measurement data) or even running on a
+Imspector comes with a Python Interface named SpecPy which can be used either 
+from the embedded Python console or from an external Python console running on 
+the same computer (to enable sharing of measurement data) or even running on a 
 different computer. 
 
 --------------------
