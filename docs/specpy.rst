@@ -658,14 +658,6 @@ returns the data of the stack as a NumPy `array
 
 .. code-block:: python
 
-  stack.set_data(array)
-
-where :code:`array` is a NumPy `array 
-<http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html>`_ sets the 
-data values of the stack to those of the array,
-
-.. code-block:: python
-
   stack.meta_data()
 
 returns the meta data of the stack as a dictionary of name value pairs (amongst others the units of the pixels are given
