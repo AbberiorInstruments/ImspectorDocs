@@ -106,13 +106,8 @@ returns the Imspector device drivers as a dictionary of name value pairs,
   imspector.parameters(path)
 
 where :code:`path` is of the form `device/.../parameter_name` returns the 
-corresponding Imspector parameter values of this path and all existing sub paths.
-If there is more than one value, paths and values are returned as dictionary.
-
-Use empty string (:code:`""`)to specify the root path.
-
-Returns a "Invalid path .." RuntimeError if the path is not existing, i.e. if no
-Imspector parameter values exist for this path.
+corresponding Imspector parameter value (the empty path returns a dictionary 
+of name value pairs of all parameters),
 
 .. code-block:: python
 
@@ -654,6 +649,14 @@ returns the list of offsets of all dimensions of the stack,
 
 where :code:`numbers` is a list of numbers for all dimensions sets the 
 corresponding offsets of the stack,
+
+.. code-block:: python
+
+  stack.parameters(path)
+
+where :code:`path` is of the form `.../parameter_name` returns the 
+corresponding stack parameter value (the empty path returns a dictionary of 
+name value pairs of all parameters),
 
 .. code-block:: python
 
