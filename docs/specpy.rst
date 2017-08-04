@@ -106,8 +106,8 @@ returns the Imspector device drivers as a dictionary of name value pairs,
   imspector.parameters(path)
 
 where :code:`path` is of the form `device/.../parameter_name` returns the 
-corresponding Imspector parameter value (the empty path returns a dictionary 
-of name value pairs of all parameters),
+corresponding Imspector parameter value (the empty path returns a dictionary of 
+name value pairs of all parameters),
 
 .. code-block:: python
 
