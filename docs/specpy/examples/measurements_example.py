@@ -7,7 +7,7 @@
 
     March, 2015, Jan Keller (jan.keller@mpibpc.mpg.de)
 
-    See also: https://imspector.mpibpc.mpg.de/documentation/specpy_examples.html
+    See also: http://imspectordocs.readthedocs.io/en/latest/specpy/examples.html
 """
 
 # Python 2/3 compatibility

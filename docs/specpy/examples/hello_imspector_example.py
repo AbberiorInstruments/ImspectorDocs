@@ -5,7 +5,7 @@
     Requirements: Latest Python 2.X or 3.X, specpy (https://pypi.python.org/pypi/specpy/1.0.2)
     which itself requires NumPy >= 1.8.1, Imspector with "Run Server" checked and an open measurement
 
-    See also: https://imspector.mpibpc.mpg.de/documentation/specpy_examples.html
+    See also: http://imspectordocs.readthedocs.io/en/latest/specpy/examples.html
 """
 
 # Python 2/3 compatibility

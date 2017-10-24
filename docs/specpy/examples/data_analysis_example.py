@@ -6,7 +6,7 @@
     which itself requires NumPy >= 1.8.1, Imspector with "Run Server" checked and the file
     "data_analysis_example.msr".
         
-    See also: https://im.mpibpc.mpg.de/documentation/specpy_examples.html        
+    See also: http://imspectordocs.readthedocs.io/en/latest/specpy/examples.html
 """
 
 # Python 2/3 compatibility
