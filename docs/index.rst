@@ -14,7 +14,7 @@ Contents:
    index
    
    intro
-   contribute
+   
    quickstart
    tutorial
    installation
@@ -24,7 +24,10 @@ Contents:
    specpy
    specmx
    utilities
-   howtos
+   howtos   
+   Shortcuts
+   
+   contribute
    faq
    fileformat
    development
