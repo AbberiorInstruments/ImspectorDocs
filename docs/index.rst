@@ -10,13 +10,12 @@ Contents:
 
 .. toctree::
    :maxdepth: 4
-
-   index
    
    intro
    
    quickstart
    tutorial
+   
    installation
    ui
    data
@@ -29,6 +28,7 @@ Contents:
    
    contribute
    faq
+   
    fileformat
    development
 
