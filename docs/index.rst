@@ -11,6 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 4
 
+   index
+   
    intro
    contribute
    quickstart
