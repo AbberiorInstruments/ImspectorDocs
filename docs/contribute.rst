@@ -1,6 +1,6 @@
-=================
-How to Contribute
-=================
+==================================
+Contributions to the Documentation
+==================================
 
 You are welcome to correct any errors and contribute yourself to this documentation.
 
