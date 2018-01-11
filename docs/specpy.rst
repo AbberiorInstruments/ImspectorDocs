@@ -67,15 +67,15 @@ Imspector
 
 .. code-block:: python
 
-  Imspector()
+  get_application()
 
-first tries to return a local Imspector object (living in the same process) or 
-else returns a proxy Imspector object connected to the Imspector Application 
-running on `localhost`.
+first tries to return the local Imspector object (living in the same process) 
+or else returns a proxy Imspector object connected to the Imspector 
+Application running on `localhost`.
 
 .. code-block:: python
 
-  Imspector(host)
+  get_application(host)
 
 where :code:`host` is a host name returns a proxy Imspector object connected 
 to the Imspector Application running on the corresponding host.
