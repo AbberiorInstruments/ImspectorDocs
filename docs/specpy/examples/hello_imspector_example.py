@@ -15,7 +15,7 @@ from __future__ import absolute_import, division, print_function
 import specpy as sp
 
 # connect to local Imspector
-im = sp.Imspector()
+im = sp.get_application()
 
 # print Imspector host and version
 print('Connected to Imspector {} on {}'.format(im.version(), im.host()))
