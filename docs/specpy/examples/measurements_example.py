@@ -23,7 +23,7 @@ import numpy as np
 import specpy as sp
 
 # get imspector object and print version
-im = sp.Imspector()
+im = sp.get_application()
 print('Imspector {} on {}'.format(im.version(), im.host()))
 
 # print existing device drivers
