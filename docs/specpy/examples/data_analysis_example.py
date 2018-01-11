@@ -19,7 +19,7 @@ import numpy as np
 import specpy as sp
 
 # connect to local Imspector and open an example file
-im = sp.Imspector()
+im = sp.get_application()
 measurement = im.open("data_analysis_example.msr")
 
 # set threshold
