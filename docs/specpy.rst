@@ -80,7 +80,7 @@ Application running on `localhost`.
 where :code:`host` is a host name returns a proxy Imspector object connected 
 to the Imspector Application running on the corresponding host.
 
-If :code:`imspector` is an Imspector object than
+If :code:`imspector` is an Imspector object then
 
 .. code-block:: python
 
@@ -190,13 +190,6 @@ measurement in Imspector,
 
 .. code-block:: python
 
-  imspector.stop(measurement)
-
-where :code:`measurement` is a Measurement object, stops the corresponding 
-measurement in Imspector,
-
-.. code-block:: python
-
   imspector.run(measurement)
 
 where :code:`measurement` is a Measurement object, runs the corresponding 
@@ -255,7 +248,7 @@ if :code:`flag` if :code:`1` the end of one measurement step).
 Measurement
 ====================
 
-If :code:`measurement` is a Measurement object than
+If :code:`measurement` is a Measurement object then
 
 .. code-block:: python
 
@@ -389,7 +382,7 @@ default or :code:`False` saves it into a file.
 Configuration
 ====================
 
-If :code:`configuration` is a Configuration object than
+If :code:`configuration` is a Configuration object then
 
 .. code-block:: python
 
@@ -451,7 +444,7 @@ where :code:`path` is the path to an `.obf` or `.msr` file and :code:`mode` is
 either :code:`File.Read` or :code:`File.Write` or :code:`File.Append` opens it 
 and returns the corresponding File object.
 
-If :code:`file` is a File object than
+If :code:`file` is a File object then
 
 .. code-block:: python
 
@@ -511,7 +504,7 @@ where :code:`type` is a NumPy `array data type
 and :code:`sizes` is a list of sizes of all dimensions returns a new local 
 Stack object.
 
-If :code:`stack` is a Stack object than
+If :code:`stack` is a Stack object then
 
 .. code-block:: python
 
