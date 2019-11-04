@@ -98,37 +98,46 @@ structure:
 
 .. code-block:: cpp
 
+   
    typedef struct _OBF_STACK_HEADER
    {
-      //! Magic header "OMAS_BF_STACK\n" then 0xff 0xff
-      char magic_header[16]; 
-      //! The version of the file format
-      omas_UINT32 format_version;
+      //! Magic header. As long as this matches the compiled-in magic string
+      //! the format is forward and backward compatible.
+      //! For this version of the header the magic string is "OMAS_BF_STACK\n"
+      //! followed by 0xff 0xff
+      char magic_header[16]{};
+      //! The version of the file format for backwards compatibility.
+      omas_UINT32 format_version{};
       //! The rank of the stack.
-      omas_UINT32 rank;
+      omas_UINT32 rank{};
       //! The number of pixels along the axes
-      omas_UINT32 res[OMAS_MAX_DIMENSIONS];
+      omas_UINT32 res[OMAS_BF_MAX_DIMENSIONS]{};
       //! The physical length of the stack axes
-      double len[OMAS_MAX_DIMENSIONS];
+      double len[OMAS_BF_MAX_DIMENSIONS]{};
       //! The physical offset of the stack
-      double off[OMAS_MAX_DIMENSIONS];
+      double off[OMAS_BF_MAX_DIMENSIONS]{};
       //! The data type of the stack on disk.
-      omas_DT dt;
-      //! The type of compression. 
-      omas_UINT32 compression_type;
+      omas_DT dt{};
+      //! The type of compression. Currently 1 for zip and 0 for none
+      omas_UINT32 compression_type{};
       //! The compression level 0-9
-      omas_UINT32 compression_level;
+      omas_UINT32 compression_level{};
       //! The length of the utf-8 name of the stack in bytes
-      omas_UINT32 name_len;
-      //! The length of the utf-8 description in bytes. 
-      omas_UINT32 descr_len;
-      //! Unused as of version 1
-      omas_UINT64 reserved;
-      //! The length of the data on the disk.   
-      omas_UINT64 data_len_disk;
+      omas_UINT32 name_len{};
+      //! The length of the utf-8 description in bytes. It should be a valid xml
+      //! description. However if it is not, a reading routine should still read
+      //! the stack and save the description as metadata containing a single
+      //! string.
+      omas_UINT32 descr_len{};
+      //! Do not touch! A value of 0 will indicate data-less stack to pre-versions
+      omas_UINT64 reserved{};
+      //! The length of the data on the disk. For version 6 stacks this is just the offset from the
+      //! end of the header plus description to the stack footer which needs to be read before reading
+       //! the stack.
+      omas_UINT64 data_len_disk{};
       //! The next stack position in the file
-      omas_UINT64 next_stack_pos;
-            
+      omas_UINT64 next_stack_pos{};
+
    } OBF_STACK_HEADER;
 
 The header is immediately followed by :cppcode:`name_len` bytes of a UTF-8 string containing
@@ -221,30 +230,75 @@ stack footer
    //! Stack footer
    typedef struct _OBF_STACK_FOOTER
    {
-      //! The total size until the variable sized parts (col_positions) start
-      omas_UINT32 size;
-      //! Entries are != 0 for all aces that have a pixel position array
-      //! following.
-      omas_UINT32 has_col_positions[OMAS_BF_MAX_DIMENSIONS];
-      //! Entries are != 0 for all aces that have a label following
-      omas_UINT32 has_col_labels[OMAS_BF_MAX_DIMENSIONS];
-      //! Length of the metadata following the footer
-      omas_UINT32 metadata_length;
+      // VERSION 1, no footer before VERSION 1
 
-      // The following is starting with stack version 2
+      //! Size of the struct
+      omas_UINT32 size{};
+
+      //! Entries are != 0 for all axes that have a pixel position array following.
+      omas_UINT32 has_col_positions[OMAS_BF_MAX_DIMENSIONS]{};
+      //! Entries are != 0 for all aces that have a label following
+      omas_UINT32 has_col_labels[OMAS_BF_MAX_DIMENSIONS]{};
+
+      // VERSION 1A??
+
+      //! Length of a free metadata string which has been superseded by the tag dictionary. It may
+      //! still be there for some files of version < VERSION 4.
+      //! The metadata-string immediately follows col positions and col labels.
+      omas_UINT32 metadata_length{};
+
+      // VERSION 2
 
       //! Si units of the value carried
-      OBF_SI_UNIT si_value;
+      OBF_SI_UNIT si_value{};
       //! Si units of the axes
-      OBF_SI_UNIT si_dimensions[OMAS_MAX_DIMENSIONS];
+      OBF_SI_UNIT si_dimensions[OMAS_BF_MAX_DIMENSIONS]{};
 
-      // The following is starting with stack version 3
-      
+      // VERSION 3
+
       //! The number of flush points
-      omas_UINT64 num_flush_points;
+      omas_UINT64 num_flush_points{};
       //! The flush block size
-      omas_UINT64 flush_block_size;
-      
+      omas_UINT64 flush_block_size{};
+
+      // VERSION 4
+
+      //! The total length of the tag dictionary following the flush positions the dictionary
+      //! consists of a number of entries of the following type ending with zero unit32:
+      //! <len of key [uint32]><key><len of val [uint32]><val>
+      omas_UINT64 tag_dictionary_length{};
+
+      // VERSION 5
+
+      //! Where on disk all the meta-data ends. This is only important for formats that read a
+      //! container in which OBF resides as a file format and for removing extra space in the
+      //! compacting routine
+      omas_UINT64 stack_end_disk{};
+
+      //! Should always be 1, as we want forward- and backwards compatibility but should still be
+      //! honored in readers as an emergency break for the future.
+      //! If we break forward compatibility this will be noted here and a new number != 1 will be
+      //! named in the comment
+      omas_UINT32 min_format_version{};
+
+      // VERSION 5a ("blind version increase due to bioformats")
+
+      //! The position where the stack ends on disk. The space between stack_end_disk and
+      //! stack_end_used_disk is unused and not allowed to be used by anything as it can be
+      //! cleared at any time
+      omas_UINT64 stack_end_used_disk{};
+
+      // VERSION 6 
+
+      //! The total number of samples available on disk. By convention all remaining data is 
+      //! assumed to be zero or undefined. If this is less than the data contained of the stack
+      //! it is safe to assume that the stack was truncated by ending the measurement early.
+      //! If 0, the number of samples written is the one expected from the stack size.
+      omas_UINT64 samples_written{ 0 };
+
+      //! The number of chunk positions in V6 chunk wise writing
+      omas_UINT64 num_chunk_positions{ 0 };
+
    } OBF_STACK_FOOTER;
 
 where the :cppcode:`OBF_SI_UNIT` structure is defined as follows:
@@ -334,22 +388,42 @@ num_flush_points
    i.e. inflateInit2(h, -15) needs to be called in zlib.
 flush_block_size
    The number of (uncompressed) bytes between full flush points. See above.
+tag_dictionary_length
+   The number of bytes contained in the tag dictionary that follows the flush points. The
+   tag dictionary is organized as in the way outlined above. key names names are Utf8 encoded.
+   Most key values are xml as the description.
+   The 'imspector' tag e.g. provides all imspector related meta-data.
+stack_end_disk
+   See comment.
+min_format_version
+   The minimum format version needed to successfully read this stack.
+stack_end_used_disk
+   See comment.
+samples_written
+   If smaller than the expected amount of samples, the stack was truncated at this point. 
+   Remaining data is zero by default (unless you want to show uninitialized data differently).
+num_chunk_positions
+   Chunk positions following the tag dictionary when stacks have been written interleaved. 
+   More info to follow.
+   
    
 The footer is immediately followed by :cppcode:`rank` label strings (encoded in the same form as the 
 column labels) which are in turn followed by the column positions, column labels, meta data and
 flush positions as outlined above.
 
 .. note:: Backwards and forward compatibility:
-   As outlined above, OBF files are designed to be backwards and forward compatible. Any 
-   breaking change would be accompanied by a change of the magic header. Versions after such
-   a change may introduce a different versioning scheme indicating forward compatible versions
-   but both, breaking of the forward compatibility and such a change in philosophy are currently
-   not being considered.
+   As outlined above, OBF files are designed to be backwards and forward compatible. However, 
+   version 6 files where :cppcode:`samples_written` is different from the total amount of samples in the
+   stack or where :cppcode:`num_chunk_points` is not zero break forward compatibility of old readers.
+   Readers that do not check :cppcode:`min_format_version` will fail miserably, those that do should
+   disregard the stack and notify the user. 
    
-   Also, please note that while this is unintended behaviour the footer is allowed to grow without 
-   a version jump. i.e. more data may follow or the size member may indicate that the footer 
-   structure written is larger than expected for this version. This is no problem as long as
-   its size member is used to find the beginning of the label strings.
+   Please note that :cppcode:`min_format_version` is the minimum format version that needs to be
+   implemented to successfully read all the information from the file this version knows about. The
+   footer and the data that follows are allowed to grow in future versions without this value changing.
+   You may want to notify the user if the stack or file format have gone up as information might be 
+   available but disregarded. Make sure to use the :cppcode:`size` member of the footer to jump to the
+   variable sized data section.
    
 .. note:: SI units
    While simply writing SI units as a string in a certain format would have been simpler and
