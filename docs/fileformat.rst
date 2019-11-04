@@ -143,8 +143,11 @@ structure:
 The header is immediately followed by :cppcode:`name_len` bytes of a UTF-8 string containing
 the stack name and :cppcode:`descr_len` bytes containing the UTF-8 encoded stack description, 
 which is, again, preferably in xml format such that it can be parsed into a 
-:cppcode:`OPropstruct` by :cppcode:`omas_xml2prop()`.  The binary data is possibly compressed
-and follows immediately after the description and takes up exactly :cppcode:`data_len_disk` bytes.
+:cppcode:`OPropstruct` by :cppcode:`omas_xml2prop()`. For format versions smaller than 6, 
+or if :cppcode:`num_chunk_positions` in the footer is zero, binary data follows immediately 
+after the description and takes up exactly :cppcode:`data_len_disk` bytes. It may be compressed
+using zlib (see below).
+
 \newline
 The header members are
 
@@ -208,8 +211,8 @@ dt (*see* OmasTypes.h *for the actual values*)
       dt = OMAS_DT_REAL32|OMAS_DT_COMPLEX 
 
 compression_type
-   The type of compression used. Currently only the values {bf 0} (no compression) and {\bf 1} (ZIP compression)
-   are supported.
+   The type of compression used. Currently only the values {\bf 0} (no compression) and {\bf 1} 
+   (ZIP compression) are supported.
 compression_level
    The compression level used. This is whatever the library allows. For ZIP  compression
    the levels are 0 to 9 from fastest to strongest.
@@ -404,13 +407,50 @@ samples_written
    Remaining data is zero by default (unless you want to show uninitialized data differently).
 num_chunk_positions
    Chunk positions following the tag dictionary when stacks have been written interleaved. 
-   More info to follow.
-   
-   
+   Each chunk position is a pair of 64bit unsigned integers:
+  
 The footer is immediately followed by :cppcode:`rank` label strings (encoded in the same form as the 
 column labels) which are in turn followed by the column positions, column labels, meta data and
-flush positions as outlined above.
+flush positions, tag dictionary and chunk positions as outlined above.
 
+If :cppcode:`num_chunk_positions != 0`, the data is not written continously but interleaved with other
+stacks or other file content. It is organized as follows:
+
+Let :cppcode:`start_pos` be the position following the stack header description. The data is then
+organized in chunks starting at :cppcode:`start_pos` and the :cppcode:`file_offset` positions of the
+chunks. The size of each chunk is the difference between its :cppcode:`logical_offset` and the 
+:cppcode:`logical_offset` of the next chunk. The logical and file offset of the first (unlisted) chunk
+is zero, i.e. it starts at :cppcode:`start_pos` and its length is the logical offset of the first listed
+chunk. The length of the last chunk is :cppcode:`samples_written` minus its logical offset.
+   
+If a chunk position is 
+
+.. code-block:: cpp
+
+   struct FlushPoint
+   {
+      omas_UINT64 logical_offset;
+      omas_UINT64 file_offset;
+   }
+
+Pseudo code to read all data:
+   
+.. code-block:: cpp
+
+   auto remaining = footer.samples_written;
+   auto pos = start_pos;
+   file.seek(start_pos);
+      
+   while(remaining > 0)
+   {
+      
+   }
+   
+The first value of a chunk position is the logical offset from the beginning of the compressed
+or uncompressed data in bytes, the second value is the offset in the file from the starting 
+point of the data. If several segments have the same first value it means that only the last
+is non-empty.         
+      
 .. note:: Backwards and forward compatibility:
    As outlined above, OBF files are designed to be backwards and forward compatible. However, 
    version 6 files where :cppcode:`samples_written` is different from the total amount of samples in the
