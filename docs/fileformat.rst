@@ -422,34 +422,49 @@ chunks. The size of each chunk is the difference between its :cppcode:`logical_o
 :cppcode:`logical_offset` of the next chunk. The logical and file offset of the first (unlisted) chunk
 is zero, i.e. it starts at :cppcode:`start_pos` and its length is the logical offset of the first listed
 chunk. The length of the last chunk is :cppcode:`samples_written` minus its logical offset.
-   
-If a chunk position is 
 
+If several segments have the same first value it means that only the last is non-empty. 
+Pseudo code to read all data:
+   
 .. code-block:: cpp
 
-   struct FlushPoint
+   struct ChunkPosition
    {
       omas_UINT64 logical_offset;
       omas_UINT64 file_offset;
    }
 
-Pseudo code to read all data:
+   std::vector<ChunkPosition> chunk_pos = chunk_positions_read_from_footer();
    
-.. code-block:: cpp
-
-   auto remaining = footer.samples_written;
-   auto pos = start_pos;
+   std::uint64_t pos = 0;
    file.seek(start_pos);
+   std::size_t idx = 0;
       
-   while(remaining > 0)
+   while(pos < footer.samples_written)
    {
+      auto bytes_to_read = footer.samples_written - pos;
+      std::uint64_t seek_pos = -1;
       
-   }
-   
-The first value of a chunk position is the logical offset from the beginning of the compressed
-or uncompressed data in bytes, the second value is the offset in the file from the starting 
-point of the data. If several segments have the same first value it means that only the last
-is non-empty.         
+      if (idx < footer.num_chunk_positions)
+      {
+         if (pos + bytes_to_read > chunk_pos[idx].logical_offset)
+         {
+            bytes_to_read = chunk_pos[idx].logical_offset - pos;
+            seek_pos = chunk_pos[idx].file_offset + start_pos;
+            idx++;
+         }
+      }
+      
+      if (bytes_to_read > 0)
+      {
+         read_from_file(file, bytes_to_read);
+      }
+      if (seek_pos != -1)
+      {
+         file.seek(seek_pos);
+      }
+      pos += bytes_to_read;
+   }         
       
 .. note:: Backwards and forward compatibility:
    As outlined above, OBF files are designed to be backwards and forward compatible. However, 
